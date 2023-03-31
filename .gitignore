@@ -1,6 +1,11 @@
 .*
+.*/
 !.gitignore
 public/
 node_modules/
 db.json
 package*.json
+Thumbs.db
+*.log
+.deploy*/
+_multiconfig.yml
