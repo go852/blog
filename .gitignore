@@ -1,6 +1,12 @@
 .*
+<<<<<<< HEAD
 !.gitignore
 db.json
 public/
 node_modules/
+=======
+db.json
+public/*
+node_modules/*
+>>>>>>> e1715c91d6defe175464ece9c3ef325f5ec6f5e2
 package*.json
