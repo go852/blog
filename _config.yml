@@ -73,5 +73,5 @@ deploy:
     root: /var/blog/
     port: 22
     delete: true
-    verbose: true
+    verbose: false
     ignore_errors: false
