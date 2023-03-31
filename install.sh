@@ -31,3 +31,4 @@ for module in $modules; do
   ;;
   esac
 done
+[[ -f source/_posts/hello-world.md ]] && rm -f source/_posts/hello-world.md
