@@ -24,7 +24,7 @@ wget https://nodejs.org/dist/v19.8.1/node-v19.8.1.pkg
 sudo installer -verbose -pkg node-v19.8.1.pkg -target /
 ```
 
-<img src="image-20230329111958138.png" alt="image-20230329111958138" style="zoom:50%;" />
+<img src="image-20230329111958138.jpg" alt="image-20230329111958138" style="zoom:100%;" />
 
 ## 设置NPM国内镜像源
 
@@ -57,7 +57,7 @@ hexo server
 
 ### 浏览站点（测试）
 
-<img src="image-20230330120820110.png" alt="image-20230330120820110" style="zoom:50%;" />
+<img src="image-20230330120820110.jpg" alt="image-20230330120820110" style="zoom:100%;"/>
 
 ## 配置站点
 
