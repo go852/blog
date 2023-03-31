@@ -1,0 +1,6 @@
+.*
+!.gitignore
+db.json
+public/
+node_modules/
+package*.json
