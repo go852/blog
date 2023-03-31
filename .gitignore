@@ -1,16 +1,7 @@
 .*
-<<<<<<< HEAD
-<<<<<<< HEAD
 !.gitignore
 db.json
 public/
 node_modules/
-=======
-=======
-!.gitignore
->>>>>>> 5090bdc7974065dc2ae165fccd9aa843c09f7b11
 db.json
-public/*
-node_modules/*
->>>>>>> e1715c91d6defe175464ece9c3ef325f5ec6f5e2
 package*.json
