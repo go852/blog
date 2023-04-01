@@ -211,9 +211,9 @@ marked:
   postAsset: true
 ```
 
-### 部署服务器
+## 部署服务器
 
-#### Git
+### Git
 
 安装模块hexo-deployer-git
 
@@ -232,7 +232,19 @@ deploy:
 
 需要在github网站上用户设置增加SSH Key。
 
-#### Rsync
+#### 测试与github的连接
+
+```bash
+ssh -T git@github.com
+```
+
+输出结果如下为连接正常。
+
+```
+Hi 852us! You've successfully authenticated, but GitHub does not provide shell access.
+```
+
+### Rsync
 
 安装模块hexo-deployer-rsync
 
