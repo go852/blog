@@ -25,6 +25,7 @@ modules="
 
 case $1 in
 i | in | install )
+  echo npm install
   npm install
   for module in $modules; do
     echo npm install $module --save
