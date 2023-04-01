@@ -240,9 +240,11 @@ ssh -T git@github.com
 
 输出结果如下为连接正常。
 
-```
+---
+
 Hi 852us! You've successfully authenticated, but GitHub does not provide shell access.
-```
+
+---
 
 ### Rsync
 
