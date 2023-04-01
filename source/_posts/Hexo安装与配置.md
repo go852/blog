@@ -1,5 +1,5 @@
 ---
-title: Hexo安装
+title: Hexo安装与配置
 date: 2023-03-31 09:19:34
 tags: [网站设计,Hexo] # 用","分隔不同的标签
 categories: [网站设计,Hexo] # 用","分隔分类与子类
