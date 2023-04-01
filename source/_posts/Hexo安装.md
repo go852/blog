@@ -256,16 +256,11 @@ deploy:
   ignore_errors: false
 ```
 
-## 快速复制blog
-
-1. 创建全新站点
-2. git克隆blog
+## 从服务器创建blog
 
 ```bash
-hexo init hexo-init
 git clone https://github.com/852us/blog
 cd blog
-cp -Rn ../hexo-init/ .
 ./install.sh i
+hexo server --watch
 ```
-

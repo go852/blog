@@ -70,7 +70,7 @@ deploy:
   - type: rsync
     host: 852us.com
     user: ubuntu
-    root: /var/blog/
+    root: /var/edu
     port: 22
     delete: true
     verbose: false
