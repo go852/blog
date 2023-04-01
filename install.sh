@@ -1,12 +1,16 @@
 #!/bin/bash
 
-if [ $# -lt 1 ]; then
+help() {
   echo "
 Usage:
     $0 i | install: install modules
     $0 u | uninstall: uninstall modules
 "
-    exit
+  exit
+}
+
+if [ $# -lt 1 ]; then
+  help
 fi
 
 npm config set registry https://registry.npm.taobao.org 
@@ -19,16 +23,21 @@ modules="
   hexo-deployer-rsync
 "
 
-for module in $modules; do
-  case $1 in
-  i | install )
+case $1 in
+i | in | install )
+  npm install
+  for module in $modules; do
     echo npm install $module --save
     npm install $module --save
-    ;;
-  u | uninstall )
-    echo npm uninstall $module --save
-    npm uninstall $module --save
+  done
   ;;
-  esac
-done
+u | un | uninstall )
+  rm -rf node_modules
+  ;;
+*)
+  help
+  ;;
+esac
+
+
 [[ -f source/_posts/hello-world.md ]] && rm -f source/_posts/hello-world.md
