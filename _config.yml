@@ -5,7 +5,7 @@ keywords: null
 author: Paul Ding
 language: zh-CN
 timezone: Asia/Shanghai
-url: https://blog.852us.com/
+url: https://edu.852us.com/
 permalink: ':year/:month/:day/:title/'
 permalink_defaults: null
 pretty_urls:
@@ -35,7 +35,7 @@ highlight:
   enable: true
   line_number: true
   auto_detect: false
-  tab_replace: ''
+  tab_replace: '  '
   wrap: true
   hljs: false
 prismjs:
