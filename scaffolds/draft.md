@@ -1,7 +1,8 @@
 ---
 title: {{ title }}
-date: {{ date }}
-categories: [] # 用","分隔分类与子类
-tags: [] # 用","分隔不同的标签
+categories:
+- # 增加一个分类，在下面增加以"-"开始的一行
+tags: 
+- # 增加一个标签，在下面增加以"-"开始的一行 
 mathjax: 
 ---
