@@ -4,8 +4,6 @@ date: 2023-03-31 09:19:34
 tags: [网站设计,Hexo] # 用","分隔不同的标签
 categories: [网站设计,Hexo] # 用","分隔分类与子类
 ---
-# Hexo安装与配置
-
 ## 安装Node.js
 
 1. 安装Node.js（19.x）包括npm
@@ -167,7 +165,7 @@ keywords: C语言,Python语言,程序设计,中小学教育
 author: 852us
 language: zh-CN
 timezone: Asia/Shanghai
-url: http://blog.852us.com/
+url: http://edu.852us.com/
 ```
 
 修改文章（海报）模板文件：scaffolds/post.md
@@ -249,7 +247,7 @@ deploy:
 - type: rsync
   host: 852us.com
   user: ubuntu
-  root: /var/blog/ # 服务器https服务根目录
+  root: /var/edu # 服务器https服务根目录
   port: 22
   delete: true
   verbose: true
@@ -259,8 +257,8 @@ deploy:
 ## 从服务器创建blog
 
 ```bash
-git clone https://github.com/852us/blog
-cd blog
+git clone https://github.com/852us/edu
+cd edu
 ./install.sh i
 hexo server --watch
 ```
