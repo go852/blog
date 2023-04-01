@@ -59,6 +59,8 @@ pagination_dir: page
 include: null
 exclude: null
 ignore: null
+toc:
+  maxdepth: 3
 theme: stellar
 marked:
   prependRoot: true
