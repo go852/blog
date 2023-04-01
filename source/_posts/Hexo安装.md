@@ -38,21 +38,38 @@ npm config set registry https://registry.npm.taobao.org
 npm config set registry https://registry.npmmirror.com
 ```
 
+使用以下命令可以查看npm的设置信息：
+
+```bash
+npm config list
+```
+
+删除镜像源：
+
+```bash
+npm config delete registry
+```
+
 ## 安装Hexo
 
 ```bash
 sudo npm install -g hexo-cli
 ```
 
-
-
 ## 一键建站
 
 ```bash
 hexo init blog # 建立站点
 cd blog
-npm install
 hexo server
+```
+
+建立站点也可以用以下方式进行：
+
+```bash
+git clone https://github.com/hexojs/hexo-starter.git blog
+cd blog
+npm install
 ```
 
 ### 浏览站点（测试）

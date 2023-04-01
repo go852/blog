@@ -5,8 +5,10 @@ public/
 node_modules/
 db.json
 package*.json
+!package.json
 Thumbs.db
 *.log
 .deploy*/
 _multiconfig.yml
 hello-world.md
+*.bak
