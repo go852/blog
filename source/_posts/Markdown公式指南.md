@@ -36,9 +36,7 @@ $$
 ```
 
 $$
-\begin{equation*}
 E = m \cdot c^2
-\end{equation*}
 $$
 
 ### 自动编号
@@ -107,9 +105,7 @@ $$ x^{y^z}=(1+{\rm e}^x)^{-2xy^w} $$
 ```
 
 $$
-\begin{equation*}
 x^{y^z}=(1+{\rm e}^x)^{-2xy^w}
-\end{equation*}
 $$
 
 ```markdown
@@ -137,6 +133,20 @@ $$
 
 ## 输入括号和分隔符
 
+|  输入   |   显示    |  输入   |   显示    |
+| :-----: | :-------: | :-----: | :-------: |
+| \langle | $\langle$ | \rangle | $\rangle$ |
+| \lceil  | $\lceil$  | \rceil  | $\rceil$  |
+| \lfloor | $\lfloor$ | \rfloor | $\rfloor$ |
+| \lbrace | $\lbrace$ | \rbrace | $\rbrace$ |
+| \lvert  | $\lvert$  | \rvert  | $\rvert$  |
+| \lVert  | $\lvert$  | \rVert  | $\rVert$  |
+
+`$$ f(x,y,z) = 3y^2z \left( 3+\frac{7x+5}{1+y^2} \right) $$`
+$$
+f(x,y,z) = 3y^2z \left( 3+\frac{7x+5}{1+y^2} \right)
+$$
+
 
 
 ## 分数
@@ -150,9 +160,7 @@ $$ \\frac{a-1}{b-1} \quad or \quad {a+1 \over b+1} $$
 ```
 
 $$
-\begin{equation*}
 \frac{a-1}{b-1} \quad or \quad {a+1 \over b+1}
-\end{equation*}
 $$
 
 ## 公式对齐
