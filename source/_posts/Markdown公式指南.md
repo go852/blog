@@ -1,4 +1,5 @@
 ---
+
 title: Markdown公式指南
 categories:
   - [网站设计,Markdown]
@@ -44,6 +45,10 @@ $$
 公式可以用如下方法表示：
 
 ```markdown
+\begin{equation}与\end{equation}的组合，不自动编号。
+```
+
+```markdown
 $$
 \begin{equation}
     表达式
@@ -77,7 +82,10 @@ $$
 
 ###  手动编号
 
+```markdown
+\begin{equation*}与\end{equation*}的组合，不自动编号。
 若需要手动编号，可在公式后使用 `\tag{编号}` 语句。
+```
 
 ```markdown
 $$
@@ -116,12 +124,10 @@ $$
 \sideset{^1_2}{^3_4}\bigotimes \quad or \quad {^1_2}\bigotimes {^3_4}
 $$
 
-
-
 ## 开方
 
 使用 `\sqrt [根指数，省略时为2] {被开方数}` 命令输入开方。
-本例内 `\quad` 均为空格符号，为方便公式格式对比而添加，请注意辨别。详见[在字符间加入空格](# 3在字符间加入空格)。
+本例内 `\quad` 均为空格符号，为方便公式格式对比而添加，请注意辨别。
 
 ```markdown
 $$ \sqrt{2} \quad or \quad \sqrt[n]{3} $$
@@ -130,24 +136,6 @@ $$ \sqrt{2} \quad or \quad \sqrt[n]{3} $$
 $$
 \sqrt{2} \quad or \quad \sqrt[n]{3}
 $$
-
-## 输入括号和分隔符
-
-|  输入   |   显示    |  输入   |   显示    |
-| :-----: | :-------: | :-----: | :-------: |
-| \langle | $\langle$ | \rangle | $\rangle$ |
-| \lceil  | $\lceil$  | \rceil  | $\rceil$  |
-| \lfloor | $\lfloor$ | \rfloor | $\rfloor$ |
-| \lbrace | $\lbrace$ | \rbrace | $\rbrace$ |
-| \lvert  | $\lvert$  | \rvert  | $\rvert$  |
-| \lVert  | $\lvert$  | \rVert  | $\rVert$  |
-
-`$$ f(x,y,z) = 3y^2z \left( 3+\frac{7x+5}{1+y^2} \right) $$`
-$$
-f(x,y,z) = 3y^2z \left( 3+\frac{7x+5}{1+y^2} \right)
-$$
-
-
 
 ## 分数
 
@@ -162,6 +150,199 @@ $$ \\frac{a-1}{b-1} \quad or \quad {a+1 \over b+1} $$
 $$
 \frac{a-1}{b-1} \quad or \quad {a+1 \over b+1}
 $$
+
+## 输入括号和分隔符
+
+|   输入    |   显示    |   输入    |   显示    |
+| :-------: | :-------: | :-------: | :-------: |
+| `\langle` | $\langle$ | `\rangle` | $\rangle$ |
+| `\lceil`  | $\lceil$  | `\rceil`  | $\rceil$  |
+| `\lfloor` | $\lfloor$ | `\rfloor` | $\rfloor$ |
+| `\lbrace` | $\lbrace$ | `\rbrace` | $\rbrace$ |
+| `\lvert`  | $\lvert$  | `\rvert`  | $\rvert$  |
+| `\lVert`  | $\lVert$  | `\rVert`  | $\rVert$  |
+
+```markdown
+$$
+markdownf(x,y,z) = 3y^2z \left( 3+\frac{7x+5}{1+y^2} \right)
+$$
+```
+
+$$
+f(x,y,z) = 3y^2z \left( 3+\frac{7x+5}{1+y^2} \right)
+$$
+
+```markdown
+$$
+xy _\text{ with arrows:} \quad \overleftarrow{xy} \; \mid \; \overleftrightarrow{xy} \; \mid \; \overrightarrow{xy}
+$$
+```
+
+$$
+xy _\text{ with arrows:} \quad \overleftarrow{xy} \; \mid \; \overleftrightarrow{xy} \; \mid \; \overrightarrow{xy}
+$$
+
+## 省略号
+
+数学公式中常见的省略号有两种，`\ldots` 表示与 **文本底线** 对齐的省略号，`\cdots` 表示与 **文本中线** 对齐的省略号。
+
+> `$$ f(x_1,x_2,\underbrace{\ldots}_{\rm ldots} ,x_n) = x_1^2 + x_2^2 + \underbrace{\cdots}_{\rm cdots} + x_n^2 $$`
+
+$$ f(x_1,x_2,\underbrace{\ldots}_{\rm ldots} ,x_n) = x_1^2 + x_2^2 + \underbrace{\cdots}_{\rm cdots} + x_n^2 $$
+
+## 向量
+
+使用 `\vec{向量}` 来自动产生一个向量。也可以使用 `\overrightarrow` 等命令自定义字母上方的符号。
+例内 `\quad` `\mid` `\,` 等均为空格或分隔符号，为方便公式格式对比而添加，请注意辨别。
+
+```markdown
+$$
+\vec{a} \cdot \vec{b}=0
+$$
+```
+
+$$
+\vec{a} \cdot \vec{b}=0
+$$
+
+ 
+
+## 积分
+
+使用 `\int_积分下限^积分上限 {被积表达式}` 来输入一个积分。
+
+```markdown
+$$ \int_0^1 {x^2} \, {\rm d}x $$
+```
+
+$$
+\int_0^1 {x^2} \, {\rm d}
+$$
+
+|   输入   |   显示   |   输入    |   显示    |
+| :------: | :------: | :-------: | :-------: |
+|  `\int`  |  $\int$  |  `\oint`  |  $\oint$  |
+| `\iint`  | $\iint$  | `\oiint`  | $\oiint$  |
+| `\iiint` | $\iiint$ | `\oiiint` | $\oiiint$ |
+
+
+
+## 运算符号
+
+### 算术运算符
+
+```markdown
+$$
++, \, -, \, \times, \, \cdot, \, \div, \, \pm, \, \mp
+$$
+```
+
+$$
++, \, -, \, \times, \, \cdot, \, \div, \, \pm, \, \mp
+$$
+
+### 关系运算符
+
+```markdown
+$$
+>, \, <, \, \ge, \, \le, \, \gg. \, \ll, \, \ne, \, \approx, \, \equiv
+$$
+```
+
+$$
+>, \, <, \, \ge, \, \le, \, \gg. \, \ll, \, \ne, \, \approx, \, \equiv
+$$
+
+### 集合运算符
+
+```markdown
+$$
+\cap, \, \cup, \, \in, \, \notin, \, \subseteq, \, \subsetneq, \, \subsetneqq, \, \varnothing
+$$
+```
+
+$$
+\cap, \, \cup, \, \in, \, \notin, \, \subseteq, \, \subsetneq, \, \subsetneqq, \, \varnothing
+$$
+
+### 任意、存在、不存在
+
+```markdown
+$$
+\forall, \qquad \exists, \qquad \nexists
+$$
+```
+
+$$
+\forall, \qquad \exists, \qquad \nexists
+$$
+
+### 因为、所以
+
+```markdown
+$$
+\because \qquad \therefore
+$$
+```
+
+$$
+\because \qquad \therefore
+$$
+
+### 数集
+
+```markdown
+有理数集、实数集、自然数集、正整数集、负整数集
+$$
+\mathbb Q,\qquad \R,\qquad \N,\qquad \Z_+,\qquad \Z_-
+$$
+```
+
+$$
+\mathbb Q,\qquad \R,\qquad \N,\qquad \Z_+,\qquad \Z_-
+$$
+
+### 累加、累乘运算
+
+`\sum`：$\sum$
+
+`\prod`：$\prod$
+
+`\sum_{i=1}^n \frac{1}{i^2}`：$\sum_{i=1}^n \frac{1}{i^2}$
+
+`\sum\limits_{i=1}^n \frac{1}{i^2}`：$\sum\limits_{i=1}^n \frac{1}{i^2}$
+
+`\prod_{i=1}^n \frac{1}{i^2}`：$\prod_{i=1}^n \frac{1}{i^2}$
+
+`\prod\limits_{i=1}^n \frac{1}{i^2}`：$\prod\limits_{i=1}^n \frac{1}{i^2}$
+
+## 希腊字母
+
+|    输入    |    显示    |    输入    |    显示    |
+| :--------: | :--------: | :--------: | :--------: |
+|  `\alpha`  |  $\alpha$  |  `\Alpha`  |  $\Alpha$  |
+|  `\beta`   |  $\beta$   |  `\Beta`   |  $\Beta$   |
+|  `\gamma`  |  $\gamma$  |    `\G`    |  $\Gamma$  |
+|  `\delta`  |  $\delta$  |  `\Delta`  |  $\Delta$  |
+| `\epsilon` | $\epsilon$ | `\Epsilon` | $\Epsilon$ |
+|  `\zeta`   |  $\zeta$   |  `\Zeta`   |  $\Zeta$   |
+|   `\eta`   |   $\eta$   |   `\Eta`   |   $\Eta$   |
+|  `\theta`  |  $\theta$  |  `\Theta`  |  $\Theta$  |
+|  `\iota`   |  $\iota$   |  `\Iota`   |  $\Iota$   |
+|  `\kappa`  |  $\kappa$  |  `\Kappa`  |  $\Kappa$  |
+|  `\lamda`  |  $\lamda$  |  `\Lamda`  |  $\Lamda$  |
+|   `\mu`    |   $\mu$    |   `\Mu`    |   $\Mu$    |
+|   `\nu`    |   $\nu$    |   `\Nu`    |   $\Nu$    |
+|            |            |            |            |
+|   `\pi`    |   $\pi$    |   `\Pi`    |   $\Pi$    |
+|   `\rho`   |   $\rho$   |   `\Rho`   |   $\Rho$   |
+|  `\simga`  |  $\sigma$  |  `\Sigma`  |  $\Sigma$  |
+|   `\tau`   |   $\tau$   |   `\Tau`   |   $\Tau$   |
+|            |            |            |            |
+|            |            |            |            |
+|            |            |            |            |
+
+
 
 ## 公式对齐
 
