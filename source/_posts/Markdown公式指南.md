@@ -21,15 +21,10 @@ mathjax: true
 $ 表达式 $
 ```
 
-```markdown
-$ J_\alpha(x) = \sum_{m=0}^\infty \frac{(-1)^m}{m! \Gamma (m + \alpha + 1)} {\left({ \frac{x}{2} }\right)}^{2m + \alpha} \text {，行内公式示例} $
-```
-
-$$
-\begin{equation*}
-J_\alpha(x) = \sum_{m=0}^\infty \frac{(-1)^m}{m! \Gamma (m + \alpha + 1)} {\left({ \frac{x}{2} }\right)}^{2m + \alpha} \text {，行内公式示例}
-\end{equation*}
-$$
+<div>
+  `$e^{\pi \cdot i} + 1 = 0$` <br>
+  $e^{\pi \cdot i} + 1 = 0$
+</div>
 
 ### 独立公式
 
@@ -38,12 +33,14 @@ $$ 表达式 $$
 ```
 
 ```markdown
-$$ J_\alpha(x) = \sum_{m=0}^\infty \frac{(-1)^m}{m! \Gamma (m + \alpha + 1)} {\left({ \frac{x}{2} }\right)}^{2m + \alpha} \text{，独立公式示例} $$
+$$
+E = m \cdot c^2
+$$
 ```
 
 $$
 \begin{equation*}
-J_\alpha(x) = \sum_{m=0}^\infty \frac{(-1)^m}{m! \Gamma (m + \alpha + 1)} {\left({ \frac{x}{2} }\right)}^{2m + \alpha} \text {，行内公式示例}
+E = m \cdot c^2
 \end{equation*}
 $$
 
@@ -64,7 +61,6 @@ $$
 
 ```markdown
 $$
-在公式 \eqref{eq:emc2} 中，我们看到了这个被自动编号的公式。
 \begin{equation}
     E=mc^2 \text{，自动编号公式示例}
     \label{eq:sample}
@@ -72,18 +68,17 @@ $$
 $$
 ```
 
-例子：
+> 在公式` $\eqref{emc2}$` 中，我们看到了这个被自动编号的公式。
 
+例子：
 $$
 \begin{equation}
     E=mc^2 \text{，自动编号公式示例}
-    \label{eq:emc2}
+    \label{emc2}
 \end{equation}
 $$
 
-$$
-在公式 \eqref{eq:emc2} 中，我们看到了这个被自动编号的公式。
-$$
+在公式$\eqref{emc2}$中，我们看到了这个被自动编号的公式。
 
 ###  手动编号
 
