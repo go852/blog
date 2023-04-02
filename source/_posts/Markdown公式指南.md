@@ -21,10 +21,7 @@ mathjax: true
 $ 表达式 $
 ```
 
-<div>
-  `$e^{\pi \cdot i} + 1 = 0$` <br>
-  $e^{\pi \cdot i} + 1 = 0$
-</div>
+代码`$e^{\pi \cdot i} + 1 = 0$`对应的方程显示为：$e^{\pi \cdot i} + 1 = 0$
 
 ### 独立公式
 
@@ -137,6 +134,8 @@ $$ \sqrt{2} \quad or \quad \sqrt[n]{3} $$
 $$
 \sqrt{2} \quad or \quad \sqrt[n]{3}
 $$
+
+## 输入括号和分隔符
 
 
 
