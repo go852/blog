@@ -1,10 +1,11 @@
 .*/
 .*
 !.gitignore
-public/
-node_modules/
 package*.json
 !package.json
+public/
+node_modules/
+themes/
 db.json
 _multiconfig.yml
 hello-world.md
