@@ -62,7 +62,7 @@ $$
 ```markdown
 $$
 \begin{equation}
-    E=mc^2 \text{，自动编号公式示例}
+    E=m \cdot c^2 \text{，自动编号公式示例}
     \label{eq:sample}
 \end{equation}
 $$
@@ -73,7 +73,7 @@ $$
 例子：
 $$
 \begin{equation}
-    E=mc^2 \text{，自动编号公式示例}
+    E=m \cdot c^2 \text{，自动编号公式示例}
     \label{emc2}
 \end{equation}
 $$
