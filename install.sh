@@ -21,6 +21,7 @@ modules="
   hexo-renderer-pandoc 
   hexo-deployer-git
   hexo-deployer-rsync
+  hexo-toc
 "
 
 case $1 in
