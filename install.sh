@@ -27,24 +27,30 @@ fi
 # hexo-theme-butterfly
 # hexo-theme-stellar 
 if [ -f package.json ] ; then
-  modules=$(awk -F '[":]' '/^.*"hexo.*":/{print $2}' package.json)
+  modules=$(awk -F '[":]' '/^.*"hexo-.*":/{print $2}' package.json)
 fi
 
-echo "\$modules: $modules"
+echo "==================================================================="
+echo -e "Modules to install: \n$modules"
+echo "==================================================================="
 echo
 
 pages="about categories tags"
 
-case $1 in
-i | in | install )
-  #echo npm install
-  #npm install
+install() {
   echo npm install $modules --save
   npm install $modules --save
   for page in $pages; do
-    echo hexo new page $page
-    hexo new page $page
+    if [ ! -d source/${page} ] && [ ! -f source/${page}.md ]; then
+      echo hexo new page $page
+      hexo new page $page
+    fi
   done
+}
+
+case $1 in
+i | in | install )
+  install
   ;;
 u | un | uninstall )
   rm -rf node_modules
