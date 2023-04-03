@@ -33,12 +33,18 @@ fi
 echo "\$modules: $modules"
 echo
 
+pages="about categories tags"
+
 case $1 in
 i | in | install )
   #echo npm install
   #npm install
   echo npm install $modules --save
   npm install $modules --save
+  for page in pages; do
+    echo hexo new page $page
+    hexo new page $page
+  done
   ;;
 u | un | uninstall )
   rm -rf node_modules
