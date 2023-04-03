@@ -103,7 +103,7 @@ $$
 
 ### 多行公式
 
-> 多行公式表示方式：\begin{aligned}与\end{aligned}
+> 多行公式表示方式：`\begin{aligned}`与`\end{aligned}`
 
 ```markdown
 $$\begin{equation}\label{eq2}
@@ -317,11 +317,11 @@ $$
 \int_0^1 {x^2} \, {\rm d}
 $$
 
-|  输入  |   显示   |  输入   |   显示    |
-| :----: | :------: | :-----: | :-------: |
-|  \int  |  $\int$  |  \oint  |  $\oint$  |
-| \iint  | $\iint$  | \oiint  | $\oiint$  |
-| \iiint | $\iiint$ | \oiiint | $\oiiint$ |
+|  输入  |   显示   | 输入  |  显示   |
+| :----: | :------: | :---: | :-----: |
+|  \int  |  $\int$  | \oint | $\oint$ |
+| \iint  | $\iint$  |       |         |
+| \iiint | $\iiint$ |       |         |
 
 
 
