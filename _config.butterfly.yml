@@ -197,14 +197,14 @@ toc:
   post: true
   page: false
   number: true
-  expand: false
+  expand: true
   style_simple: false # for post
-  scroll_percent: true
+  scroll_percent: false
 
 post_copyright:
   enable: true
   decode: false
-  author_href:
+  author_href: https://852us.github.io/
   license: CC BY-NC-SA 4.0
   license_url: https://creativecommons.org/licenses/by-nc-sa/4.0/
 
@@ -516,9 +516,9 @@ site_verification:
 # The top_img settings of home page
 # default: top img - full screen, site info - middle (默認top_img全屏，site_info在中間)
 # The position of site info, eg: 300px/300em/300rem/10% (主頁標題距離頂部距離)
-index_site_info_top:
+index_site_info_top: 200px
 # The height of top_img, eg: 300px/300em/300rem (主頁top_img高度)
-index_top_img_height:
+index_top_img_height: 200px
 
 # The user interface setting of category and tag page (category和tag頁的UI設置)
 # index - same as Homepage UI (index 值代表 UI將與首頁的UI一樣)
@@ -667,9 +667,9 @@ aside:
   mobile: true # display on mobile
   position: left # left or right
   display:
-    archive: true
-    tag: true
     category: true
+    tag: true
+    archive: true
   card_author:
     enable: true
     description:
@@ -677,10 +677,10 @@ aside:
       enable: true
       icon: fab fa-github
       text: Follow Me
-      link: https://github.com/xxxxxx
+      link: https://github.com/852us/852us.github.io
   card_announcement:
     enable: true
-    content: This is my Blog
+    content: 太行一粟的博客，专注于教育。
   card_recent_post:
     enable: true
     limit: 5 # if set 0 will show all
@@ -689,7 +689,7 @@ aside:
   card_categories:
     enable: true
     limit: 8 # if set 0 will show all
-    expand: none # none/true/false
+    expand: true # none/true/false
     sort_order: # Don't modify the setting unless you know how it works
   card_tags:
     enable: true
@@ -700,10 +700,10 @@ aside:
     sort_order: # Don't modify the setting unless you know how it works
   card_archives:
     enable: true
-    type: monthly # yearly or monthly
-    format: MMMM YYYY # eg: YYYY年MM月
+    type: yearly # yearly or monthly
+    format: YYYY年MM月 # eg: YYYY年MM月
     order: -1 # Sort of order. 1, asc for ascending; -1, desc for descending
-    limit: 8 # if set 0 will show all
+    limit: 10 # if set 0 will show all
     sort_order: # Don't modify the setting unless you know how it works
   card_webinfo:
     enable: true
@@ -771,7 +771,7 @@ rightside_scroll_percent: false
 # Don't repeat 不要重複
 rightside_item_order:
   enable: true
-  hide: #toc,chat,comment
+  hide: toc,chat,comment
   show: darkmode,readmode,hideAside,translate
 
 # Lightbox (圖片大圖查看模式)
