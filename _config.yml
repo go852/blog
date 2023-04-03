@@ -76,3 +76,8 @@ deploy:
     ignore_errors: false
 butterfly_article_double_row:
   enable: true
+math:
+  every_page: true
+  per_page: true
+  mathjax:
+    enable: true
