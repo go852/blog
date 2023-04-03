@@ -30,10 +30,8 @@ case $1 in
 i | in | install )
   echo npm install
   npm install
-  for module in $modules; do
-    echo npm install $module --save
-    npm install $module --save
-  done
+  echo npm install $modules --save
+  npm install $modules --save
   ;;
 u | un | uninstall )
   rm -rf node_modules
