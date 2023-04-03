@@ -70,45 +70,35 @@ cd blog
 npm install
 ```
 
-### 浏览站点（测试）
+### 测试站点
 
 <img src="image-20230330120820110.jpg" alt="image-20230330120820110" style="zoom:100%;"/>
 
 ## 配置站点
 
-### 推荐主题
+### 安装主题
 
-1. [Free2mind](https://github.com/rudy-yuan/free2mind)
-2. [Next](https://github.com/next-theme/hexo-theme-next)
-3. [Polk](https://github.com/chunqiuyiyu/hexo-theme-polk)
-4. [Ringo](https://github.com/HeliumOI/hexo-theme-ringo)
-5. [Stellar](https://github.com/xaoxuu/hexo-theme-stellar)
-6. [Xups](https://github.com/jangdelong/hexo-theme-xups)
+1. 安装主题（可以通过npm install hexo-theme-name或者git clone URL的方式安装）
+2. 复制主题配置文件到站点，将主题目录的`_config.yml`复制到站点：`_config.theme_name.yml`文件。
+3. 测试站点：`hexo clean ; hexo server --watch`
 
-#### NexT
+**推荐主题：**
+
+1. [Next](https://github.com/next-theme/hexo-theme-next)
+2. [Butterfly](https://github.com/jerryc127/hexo-theme-butterfly)
+3. [Stellar](https://github.com/xaoxuu/hexo-theme-stellar)
+4. [Keep](https://github.com/XPoet/hexo-theme-keep)
+5. [Free2mind](https://github.com/rudy-yuan/free2mind)
+6. [Polk](https://github.com/chunqiuyiyu/hexo-theme-polk)
+7. [Ringo](https://github.com/HeliumOI/hexo-theme-ringo)
+8. [Xups](https://github.com/jangdelong/hexo-theme-xups)
+
+**执行以下命令：**
 
 ```bash
-git clone https://github.com/next-theme/hexo-theme-next themes/next
 npm install hexo-theme-next
 hexo config theme next
-hexo clean && hexo generate -d && hexo server --watch
-```
-
-#### Ringo
-
-```bash
-git clone https://github.com/HeliumOI/hexo-theme-ringo themes/ringo
-hexo config theme ringo
-hexo clean && hexo generate -d && hexo server --watch
-```
-
-#### Stellar
-
-```bash
-git clone https://github.com/xaoxuu/hexo-theme-stellar themes/stellar
-npm install hexo-theme-stellar
-hexo config theme stellar
-hexo clean && hexo generate -d && hexo server --watch
+hexo clean && hexo server --watch
 ```
 
 ### 设置站点Front-matter
@@ -195,7 +185,7 @@ npm install hexo-renderer-pandoc --save
 
 ### 插入图片
 
-修改站点配置文件：_config.yml
+**修改站点配置文件：_config.yml**
 
 ```bash
 marked:
@@ -203,25 +193,19 @@ marked:
   postAsset: true
 ```
 
-### 修改站点配置文件
 
-```yaml
-marked:
-  prependRoot: true
-  postAsset: true
-```
 
 ## 部署服务器
 
 ### Git
 
-安装模块hexo-deployer-git
+**安装模块**
 
 ```bash
 npm install hexo-deployer-git --save
 ```
 
-编辑站点配置文件：_config.yml
+**编辑站点配置文件**
 
 ```yaml
 deploy:
@@ -232,7 +216,7 @@ deploy:
 
 需要在github网站上用户设置增加SSH Key。
 
-#### 测试与github的连接
+**测试与github的连接**
 
 ```bash
 ssh -T git@github.com
@@ -246,13 +230,13 @@ ssh -T git@github.com
 
 ### Rsync
 
-安装模块hexo-deployer-rsync
+**安装模块**
 
 ```bash
 npm install hexo-deployer-rsync --save
 ```
 
-编辑站点配置文件：_config.yml
+**编辑站点配置文件**
 
 ```yaml
 deploy:
@@ -266,11 +250,14 @@ deploy:
   ignore_errors: false
 ```
 
-## 从服务器创建blog
+
+
+## 快速创建edu博客
 
 ```bash
 git clone https://github.com/852us/edu
 cd edu
 ./install.sh i
-hexo server --watch
+hexo clean && hexo server --watch
 ```
+
