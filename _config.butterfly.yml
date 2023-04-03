@@ -194,12 +194,12 @@ anchor:
 
 # toc (目錄)
 toc:
-  post: true
-  page: false
-  number: true
-  expand: true
+  post: true # 文章设置目录
+  page: false # 独立页面不设置目录
+  number: true # 目录自动编号
+  expand: true # 目录自动展开
   style_simple: false # for post
-  scroll_percent: false
+  scroll_percent: true # 显示滚动百分比
 
 post_copyright:
   enable: true
