@@ -26,7 +26,9 @@ sudo installer -verbose -pkg node-v19.8.1.pkg -target /
 
 <img src="image-20230329111958138.jpg" alt="image-20230329111958138" style="zoom:100%;" />
 
-## 设置NPM国内镜像源
+
+
+### 设置NPM国内镜像源
 
 ```bash
 npm config set registry https://registry.npm.taobao.org 
@@ -56,10 +58,10 @@ npm config delete registry
 sudo npm install -g hexo-cli
 ```
 
-## 一键建站
+## 建立站点
 
 ```bash
-hexo init blog # 建立站点
+hexo init blog
 cd blog
 hexo server
 ```
@@ -72,9 +74,29 @@ cd blog
 npm install
 ```
 
+
+
 ### 测试站点
 
 <img src="image-20230330120820110.jpg" alt="image-20230330120820110" style="zoom:100%;"/>
+
+### 生成器
+
+生成器能够生成静态文件。
+
+```bash
+hexo generate
+```
+
+
+
+### 清理缓存及静态文件
+
+```bash
+hexo clean
+```
+
+
 
 ## 配置站点
 
@@ -103,7 +125,19 @@ hexo config theme next
 hexo clean && hexo server --watch
 ```
 
-### 设置站点Front-matter
+### 修改站点配置文件
+
+> _config.yml文件：
+
+```yaml
+post_asset_folder: true 
+# true: 新建文章将创建于文章名称相同的目录，文章保存在该目录下的index.md文件，插入本地图像打开次选项
+# false: 不创建目录，文章直接保存在source/_post/目录下，文件名为"文章名称.md"
+```
+
+
+
+### 修改模板
 
 最好的办法是在模板上设置
 
@@ -139,7 +173,9 @@ mathjax:
 hexo new page about
 ```
 
-### 新建文章（海报）
+
+
+### 新建文章
 
 文章保存目录：source/\_post/，如：一元二次方程求根公式，则为："source/\_post/一元二次方程求根公式.md"
 
@@ -160,7 +196,7 @@ timezone: Asia/Shanghai
 url: http://edu.852us.com/
 ```
 
-修改文章（海报）模板文件：scaffolds/post.md
+修改文章模板文件：scaffolds/post.md
 
 ```md
 ---
@@ -176,26 +212,23 @@ mathjax:
 
 #### 安装需要的包
 
-安装hexo-filter-mathjax、kramed包，删除hexo-math、hexo-renderer-marked包
+安装hexo-filter-mathjax、pandoc渲染包，删除hexo-math、hexo-renderer-marked包
 
 ```bash
 npm uninstall hexo-math --save
-npm install hexo-filter-mathjax --save
 npm uninstall hexo-renderer-marked  --save
+
+npm install hexo-filter-mathjax --save
 npm install hexo-renderer-pandoc --save
 ```
 
 ### 插入图片
 
-**修改站点配置文件：_config.yml**
-
-```bash
-marked:
-  prependRoot: true
-  postAsset: true
+```markdown
+<img src="image.jpg" alt="image" style="zoom:100%;"/>
 ```
 
-
+post_asset_folder为true时，image.jpg与文章保存在同一个目录下。
 
 ## 部署服务器
 
