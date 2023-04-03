@@ -30,6 +30,10 @@ modules="
   hexo-theme-stellar 
 "
 
+if [ -f package.json ] ; then
+  modules=$(awk -F '[":]' '/^.*"hexo-.*":/{print $2}' package.json)
+fi
+
 case $1 in
 i | in | install )
   echo npm install
