@@ -15,7 +15,7 @@ if [ $# -lt 1 ]; then
   help
 fi
 
-npm config set registry https://registry.npm.taobao.org 
+# npm config set registry https://registry.npm.taobao.org/
 
 modules="
   hexo-theme-butterfly
