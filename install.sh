@@ -41,7 +41,7 @@ i | in | install )
   #npm install
   echo npm install $modules --save
   npm install $modules --save
-  for page in pages; do
+  for page in $pages; do
     echo hexo new page $page
     hexo new page $page
   done
