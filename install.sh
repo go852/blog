@@ -17,15 +17,17 @@ fi
 
 # npm config set registry https://registry.npm.taobao.org/
 
+# hexo-generator-search: 本地搜索需要安装此插件
 modules="
-  hexo-theme-butterfly
-  hexo-theme-stellar 
+  hexo-deployer-git
+  hexo-deployer-rsync
   hexo-filter-mathjax 
+  hexo-generator-search
   hexo-renderer-pandoc 
   hexo-renderer-pug
   hexo-renderer-stylus
-  hexo-deployer-git
-  hexo-deployer-rsync
+  hexo-theme-butterfly
+  hexo-theme-stellar 
 "
 
 case $1 in
