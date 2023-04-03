@@ -251,14 +251,14 @@ $$
 
 ## 输入括号和分隔符
 
-|  输入   |   显示    |  输入   |   显示    |
-| :-----: | :-------: | :-----: | :-------: |
-| \langle | $\langle$ | \rangle | $\rangle$ |
-| \lceil  | $\lceil$  | \rceil  | $\rceil$  |
-| \lfloor | $\lfloor$ | \rfloor | $\rfloor$ |
-| \lbrace | $\lbrace$ | \rbrace | $\rbrace$ |
-| \lvert  | $\lvert$  | \rvert  | $\rvert$  |
-| \lVert  | $\lVert$  | \rVert  | $\rVert$  |
+|   输入    |   显示    |   输入    |   显示    |
+| :-------: | :-------: | :-------: | :-------: |
+| `\langle` | $\langle$ | `\rangle` | $\rangle$ |
+| `\lceil`  | $\lceil$  | `\rceil`  | $\rceil$  |
+| `\lfloor` | $\lfloor$ | `\rfloor` | $\rfloor$ |
+| `\lbrace` | $\lbrace$ | `\rbrace` | $\rbrace$ |
+| `\lvert`  | $\lvert$  | `\rvert`  | $\rvert$  |
+| `\lVert`  | $\lVert$  | `\rVert`  | $\rVert$  |
 
 ```markdown
 $$
@@ -317,11 +317,11 @@ $$
 \int_0^1 {x^2} \, {\rm d}
 $$
 
-|  输入  |   显示   | 输入  |  显示   |
-| :----: | :------: | :---: | :-----: |
-|  \int  |  $\int$  | \oint | $\oint$ |
-| \iint  | $\iint$  |       |         |
-| \iiint | $\iiint$ |       |         |
+|   输入   |   显示   |  输入   |  显示   |
+| :------: | :------: | :-----: | :-----: |
+|  `\int`  |  $\int$  | `\oint` | $\oint$ |
+| `\iint`  | $\iint$  |         |         |
+| `\iiint` | $\iiint$ |         |         |
 
 
 
@@ -416,30 +416,30 @@ $$
 
 ## 希腊字母
 
-| 序号 |          国际音标          |    输入    |    显示    |   输入   |    显示    |
-| :--: | :------------------------: | :--------: | :--------: | :------: | :--------: |
-|  1   |          /'ælfə/           |  `\alpha`  |  $\alpha$  |  \Alpha  |  $\Alpha$  |
-|  2   |          /'beɪtə/          |  `\beta`   |  $\beta$   |  \Beta   |  $\Beta$   |
-|  3   |          /'gæmə/           |  `\gamma`  |  $\gamma$  |    \G    |  $\Gamma$  |
-|  4   |          /’dɛltə/          |  `\delta`  |  $\delta$  |  \Delta  |  $\Delta$  |
-|  5   |         /'epsɪlɒn/         | `\epsilon` | $\epsilon$ | \Epsilon | $\Epsilon$ |
-|  6   |          /'zi:tə/          |  `\zeta`   |  $\zeta$   |  \Zeta   |  $\Zeta$   |
-|  7   |          /'i:tə/           |   `\eta`   |   $\eta$   |   \Eta   |   $\Eta$   |
-|  8   |          /'θi:tə/          |  `\theta`  |  $\theta$  |  \Theta  |  $\Theta$  |
-|  9   |         /aɪ'əʊtə/          |  `\iota`   |  $\iota$   |  \Iota   |  $\Iota$   |
-|  10  |          /'kæpə/           |  `\kappa`  |  $\kappa$  |  \Kappa  |  $\Kappa$  |
-|  11  |          /'læmdə/          | `\lambda`  | $\lambda$  | \Lambda  | $\Lambda$  |
-|  12  |           /mju:/           |   `\mu`    |   $\mu$    |   \Mu    |   $\Mu$    |
-|  13  |           /nju:/           |   `\nu`    |   $\nu$    |   \Nu    |   $\Nu$    |
-|  14  | /ksaɪ; gzaɪ; saɪ; **zaɪ**/ |   `\xi`    |   $\xi$    |   \Xi    |   $\Xi$    |
-|  15  |        /ˈɑmɪˌkrɑn/         | `\omicron` | $\omicron$ | \Omicron | $\Omicron$ |
-|  16  |           /paɪ/            |   `\pi`    |   $\pi$    |   \Pi    |   $\Pi$    |
-|  17  |           /rəʊ/            |   `\rho`   |   $\rho$   |   \Rho   |   $\Rho$   |
-|  18  |          /'sɪɡmə/          |  `\simga`  |  $\sigma$  |  \Sigma  |  $\Sigma$  |
-|  19  |           /taʊ/            |   `\tau`   |   $\tau$   |   \Tau   |   $\Tau$   |
-|  20  |         /ˈipsilon/         | `\upsilon` | $\upsilon$ | \Upsilon | $\Upsilon$ |
-|  21  |           /faɪ/            |   `\phi`   |   $\phi$   |   \Phi   |   $\Phi$   |
-|  22  |           /kaɪ/            |   `\chi`   |   $\chi$   |   \Chi   |   $\Chi$   |
-|  23  |      /psaɪ; **saɪ**/       |   `\psi`   |   $\psi$   |   \Psi   |   $\Psi$   |
-|  24  |         /'əʊmɪɡə/          |  `\omega`  |  $\omega$  |  \Omega  |  $\Omega$  |
+| 序号 |          国际音标          |    输入    |    显示    |    输入    |    显示    |
+| :----: | :------------: | :--------: | :--------: | :--------: | :--------: |
+|  1   |          /'ælfə/           |  `\alpha`  |  $\alpha$  |  `\Alpha`  |  $\Alpha$  |
+|  2   |          /'beɪtə/          |  `\beta`   |  $\beta$   |  `\Beta`   |  $\Beta$   |
+|  3   |          /'gæmə/           |  `\gamma`  |  $\gamma$  |    `\G`    |  $\Gamma$  |
+|  4   |          /’dɛltə/          |  `\delta`  |  $\delta$  |  `\Delta`  |  $\Delta$  |
+|  5   |         /'epsɪlɒn/         | `\epsilon` | $\epsilon$ | `\Epsilon` | $\Epsilon$ |
+|  6   |          /'zi:tə/          |  `\zeta`   |  $\zeta$   |  `\Zeta`   |  $\Zeta$   |
+|  7   |          /'i:tə/           |   `\eta`   |   $\eta$   |   `\Eta`   |   $\Eta$   |
+|  8   |          /'θi:tə/          |  `\theta`  |  $\theta$  |  `\Theta`  |  $\Theta$  |
+|  9   |         /aɪ'əʊtə/          |  `\iota`   |  $\iota$   |  `\Iota`   |  $\Iota$   |
+|  10  |          /'kæpə/           |  `\kappa`  |  $\kappa$  |  `\Kappa`  |  $\Kappa$  |
+|  11  |          /'læmdə/          | `\lambda`  | $\lambda$  | `\Lambda`  | $\Lambda$  |
+|  12  |           /mju:/           |   `\mu`    |   $\mu$    |   `\Mu`    |   $\Mu$    |
+|  13  |           /nju:/           |   `\nu`    |   $\nu$    |   `\Nu`    |   $\Nu$    |
+|  14  | /ksaɪ; gzaɪ; saɪ; **zaɪ**/ |   `\xi`    |   $\xi$    |   `\Xi`    |   $\Xi$    |
+|  15  |        /ˈɑmɪˌkrɑn/         | `\omicron` | $\omicron$ | `\Omicron` | $\Omicron$ |
+|  16  |           /paɪ/            |   `\pi`    |   $\pi$    |   `\Pi`    |   $\Pi$    |
+|  17  |           /rəʊ/            |   `\rho`   |   $\rho$   |   `\Rho`   |   $\Rho$   |
+|  18  |          /'sɪɡmə/          |  `\simga`  |  $\sigma$  |  `\Sigma`  |  $\Sigma$  |
+|  19  |           /taʊ/            |   `\tau`   |   $\tau$   |   `\Tau`   |   $\Tau$   |
+|  20  |         /ˈipsilon/         | `\upsilon` | $\upsilon$ | `\Upsilon` | $\Upsilon$ |
+|  21  |           /faɪ/            |   `\phi`   |   $\phi$   |   `\Phi`   |   $\Phi$   |
+|  22  |           /kaɪ/            |   `\chi`   |   $\chi$   |   `\Chi`   |   $\Chi$   |
+|  23  |      /psaɪ; **saɪ**/       |   `\psi`   |   $\psi$   |   `\Psi`   |   $\Psi$   |
+|  24  |         /'əʊmɪɡə/          |  `\omega`  |  $\omega$  |  `\Omega`  |  $\Omega$  |
 
