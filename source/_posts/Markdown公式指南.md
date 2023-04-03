@@ -6,8 +6,7 @@ tags:
   - Markdown
   - 公式
 date: 2023-04-01 21:04:14
-mathjax:
-katex: true
+mathjax: true
 ---
 
 ## 1. 插入公式
