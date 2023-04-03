@@ -22,6 +22,8 @@ wget https://nodejs.org/dist/v19.8.1/node-v19.8.1.pkg
 sudo installer -verbose -pkg node-v19.8.1.pkg -target /
 ```
 
+<!--more-->
+
 <img src="image-20230329111958138.jpg" alt="image-20230329111958138" style="zoom:100%;" />
 
 ## 设置NPM国内镜像源
