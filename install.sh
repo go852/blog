@@ -31,13 +31,16 @@ modules="
 "
 
 if [ -f package.json ] ; then
-  modules=$(awk -F '[":]' '/^.*"hexo-.*":/{print $2}' package.json)
+  modules=$(awk -F '[":]' '/^.*"hexo.*":/{print $2}' package.json)
 fi
+
+echo "\$modules: $modules"
+echo
 
 case $1 in
 i | in | install )
-  echo npm install
-  npm install
+  #echo npm install
+  #npm install
   echo npm install $modules --save
   npm install $modules --save
   ;;
