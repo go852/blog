@@ -63,7 +63,7 @@ exclude: null
 ignore: null
 toc:
   maxdepth: 3
-theme: stellar
+theme: butterfly
 deploy:
   - type: git
     repo: git@github.com:852us/852us.github.io.git
