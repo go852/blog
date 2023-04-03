@@ -40,8 +40,8 @@ copy:
 # formal:
 #   icon: link || the description
 social:
-  # fab fa-github: https://github.com/xxxxx || Github
-  # fas fa-envelope: mailto:xxxxxx@gmail.com || Email
+  fab fa-github: https://852us.github.io/ || Github
+  fas fa-envelope: mailto:ccjc2030@gmail.com || Email
 
 # search (搜索)
 # see https://butterfly.js.org/posts/ceeb73f/#搜索系統
@@ -56,7 +56,7 @@ algolia_search:
 # Local search
 local_search:
   enable: true
-  preload: false
+  preload: true
   CDN:
 
 # Docsearch
@@ -440,7 +440,7 @@ messenger:
 footer:
   owner:
     enable: true
-    since: 2020
+    since: 
   custom_text:
   copyright: true # Copyright of theme and framework
 
