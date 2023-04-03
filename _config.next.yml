@@ -644,7 +644,7 @@ pace:
 # For more information: https://github.com/hustcc/ribbon.js
 canvas_ribbon:
   enable: true
-  size: 300 # The width of the ribbon
+  size: 240 # The width of the ribbon
   alpha: 0.6 # The transparency of the ribbon
   zIndex: -1 # The display level of the ribbon
 
@@ -822,7 +822,7 @@ firestore:
 # Show Views / Visitors of the website / page with busuanzi.
 # For more information: http://ibruce.info/2015/04/04/busuanzi/
 busuanzi_count:
-  enable: false
+  enable: true
   total_visitors: true
   total_visitors_icon: fa fa-user
   total_views: true
