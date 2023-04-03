@@ -20,7 +20,7 @@ modules="
   hexo-theme-stellar 
   hexo-filter-mathjax 
   hexo-renderer-pandoc 
-  hexo-renderer-pub
+  hexo-renderer-pug
   hexo-renderer-stylus
   hexo-deployer-git
   hexo-deployer-rsync
