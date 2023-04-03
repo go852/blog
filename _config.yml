@@ -61,8 +61,6 @@ pagination_dir: page
 include: null
 exclude: null
 ignore: null
-toc:
-  maxdepth: 3
 theme: butterfly
 deploy:
   - type: git
@@ -76,12 +74,3 @@ deploy:
     delete: true
     verbose: false
     ignore_errors: false
-math:
-  enable: true
-  engine: katex
-katex:
-  enable: true
-  # true 表示每一頁都加載katex.js
-  # false 需要時加載，須在使用的Markdown Front-matter 加上 katex: true
-  per_page: false
-  hide_scrollbar: true
