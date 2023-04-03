@@ -16,9 +16,12 @@ fi
 npm config set registry https://registry.npm.taobao.org 
 
 modules="
+  hexo-theme-butterfly
   hexo-theme-stellar 
   hexo-filter-mathjax 
   hexo-renderer-pandoc 
+  hexo-renderer-pub
+  hexo-renderer-stylus
   hexo-deployer-git
   hexo-deployer-rsync
 "
