@@ -7,7 +7,7 @@ keywords:
 author: Paul Ding
 language: zh-CN
 timezone: Asia/Shanghai
-url: https://edu.852us.com/
+url: https://852us.com/
 permalink: ':year/:month/:day/:title/'
 permalink_defaults: null
 pretty_urls:
@@ -81,3 +81,12 @@ math:
   per_page: true
   mathjax:
     enable: true
+
+# 谷歌、百度站点地图生成
+Plugins:
+- hexo-generator-baidu-sitemap
+- hexo-generator-sitemap
+baidusitemap:
+    path: baidusitemap.xml
+sitemap:
+    path: sitemap.xml
