@@ -71,7 +71,7 @@ minify: true
 scheme: Gemini
 ```
 
-![Muse主题格式](image-20230404080424072.jpg)
+![image-20230414104834967](/Users/paul/Desktop/github/edu/source/_posts/NexT主题安装及配置/image-20230414104834967.png)
 
 ### 边栏控制
 
