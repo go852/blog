@@ -69,4 +69,4 @@ minify: true
 scheme: Gemini
 ```
 
-![Muse主题格式](https://852us.com/2023/04/04/NexT%E4%B8%BB%E9%A2%98%E5%AE%89%E8%A3%85%E5%8F%8A%E9%85%8D%E7%BD%AE/image-20230404080424072.jpg)
+![Muse主题格式](image-20230404080424072.jpg)
