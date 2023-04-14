@@ -71,7 +71,7 @@ minify: true
 scheme: Gemini
 ```
 
-![image-20230414104834967](/Users/paul/Desktop/github/edu/source/_posts/NexT主题安装及配置/image-20230414104834967.png)
+![Muse Scheme](image-20230414104834967.jpg)
 
 ### 边栏控制
 
@@ -82,5 +82,18 @@ sidebar:
   # Sidebar Position.
   # position: left
   position: right
+```
+
+### 颜色
+
+### 页眉面板颜色
+
+选择深蓝色（默认值："#222"）
+
+```yaml
+# Browser header panel color.
+theme_color:
+  light: "#226"
+  dark: "#226"
 ```
 
