@@ -70,3 +70,15 @@ scheme: Gemini
 ```
 
 ![Muse主题格式](image-20230404080424072.jpg)
+
+### 边栏控制
+
+> 边栏位置可以在左边，也可以在右边。
+
+```yaml
+sidebar:
+  # Sidebar Position.
+  # position: left
+  position: right
+```
+
