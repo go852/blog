@@ -38,6 +38,8 @@ cp node_modules/_config.yml _config.next.yml
 cp themes/next/_config.yml _config.next.yml
 ```
 
+<!--more-->
+
 ## 配置站点
 
 ### 设置缓存
