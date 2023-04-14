@@ -117,8 +117,8 @@ menu_settings:
 
 sidebar:
   # Sidebar Position.
-  position: left
-  #position: right
+  # position: left
+  position: right
 
   # Manual define the sidebar width. If commented, will be default for:
   # Muse | Mist: 320
@@ -348,8 +348,8 @@ mobile_layout_economy: true
 
 # Browser header panel color.
 theme_color:
-  light: "#222"
-  dark: "#222"
+  light: "#226"
+  dark: "#226"
 
 # Override browsers' default behavior.
 body_scrollbar:
@@ -643,7 +643,7 @@ pace:
 # Generate a ribbon in your website with HTML5 canvas.
 # For more information: https://github.com/hustcc/ribbon.js
 canvas_ribbon:
-  enable: true
+  enable: false
   size: 240 # The width of the ribbon
   alpha: 0.6 # The transparency of the ribbon
   zIndex: -1 # The display level of the ribbon
