@@ -5,7 +5,6 @@ categories:
 tags:
   - [网站设计,Hexo,NexT主题]
 date: 2023-04-14 10:33:46
-mathjax:
 ---
 
 ## 安装
