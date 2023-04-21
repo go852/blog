@@ -6,7 +6,6 @@ tags:
   - Bash
 date: 2023-04-21 09:05:46
 ---
-# Bash编程
 
 ## macos升级Bash
 
