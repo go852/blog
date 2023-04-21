@@ -1,9 +1,9 @@
 ---
 title: NexT主题安装及配置
 categories:
-  - null
+  - [网站设计,Hexo,NexT主题]
 tags:
-  - null
+  - [网站设计,Hexo,NexT主题]
 date: 2023-04-14 10:33:46
 mathjax:
 ---
