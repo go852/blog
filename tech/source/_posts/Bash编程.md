@@ -21,6 +21,8 @@ if [[ -z $(grep "/usr/local/bin/bash" /etc/shells) ]] ; then sudo bash -c "echo 
 chsh -s /usr/local/bin/bash
 ```
 
+<!--more-->
+
 ## 控制语句：分支与循环
 
 ### case
