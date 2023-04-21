@@ -7,7 +7,7 @@ keywords:
 author: Paul Ding
 language: zh-CN
 timezone: Asia/Shanghai
-url: https://852us.com/
+url: https://blog.852us.com/
 permalink: ':year/:month/:day/:title/'
 permalink_defaults: null
 pretty_urls:
