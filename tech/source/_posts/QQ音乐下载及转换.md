@@ -112,6 +112,7 @@ for d in *; do
     echo "处理目录：$d"
     cd "$d"
     for f in *.flac; do
+      echo xld "$f" -f wav
       xld "$f" -f wav
     done
     cd -
@@ -129,6 +130,7 @@ for d in *; do
     echo "处理目录：$d"
     cd "$d"
     for f in *.flac; do
+      echo xld "$f" -f aac
       xld "$f" -f aac
     done
     cd -
