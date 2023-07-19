@@ -110,9 +110,28 @@ brew install xld
 for d in *; do
   if [ -d "$d" ]; then
     echo "处理目录：$d"
+    cd "$d"
     for f in *.flac; do
       xld "$f" -f wav
     done
+    cd -
+  fi
+done
+```
+
+### 转换脚本flac2aac.sh
+
+```bash
+#!/bin/sh
+
+for d in *; do
+  if [ -d "$d" ]; then
+    echo "处理目录：$d"
+    cd "$d"
+    for f in *.flac; do
+      xld "$f" -f aac
+    done
+    cd -
   fi
 done
 ```
