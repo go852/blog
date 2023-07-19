@@ -26,7 +26,7 @@ cd "/Users/paul/Library/Containers/com.tencent.QQMusicMac/Data/Library/Applicati
 
 <!--more-->
 
-## 格式转换（解密）
+## 格式转换qmcflac2flac（解密）
 
 ```bash
 takiyash *.qmcflac
@@ -62,7 +62,7 @@ takiyash *.qmcflac
 takiyasha --np *.qmcflac -d /Volumes/Data/flac/
 ```
 
-### 脚本
+### 转换脚本qmc2flac.sh
 
 ```bash
 #!/bin/sh
@@ -91,6 +91,29 @@ done
 执行命令：
 
 ```bash
-./flac.sh /Volumes/Data/flac
+./qmc2flac.sh /Volumes/Data/flac
+```
+
+## 格式转换flac2wav
+
+使用xld进行格式转换
+
+```bash
+brew install xld
+```
+
+### 转换脚本flac2wav.sh
+
+```bash
+#!/bin/sh
+
+for d in *; do
+  if [ -d "$d" ]; then
+    echo "处理目录：$d"
+    for f in *.flac; do
+      xld "$f" -f wav
+    done
+  fi
+done
 ```
 
