@@ -114,8 +114,10 @@ for d in *; do
     for f in *.flac; do
       echo xld "$f" -f wav
       xld "$f" -f wav
+      echo
     done
     cd -
+    echo
   fi
 done
 ```
@@ -132,9 +134,18 @@ for d in *; do
     for f in *.flac; do
       echo xld "$f" -f aac
       xld "$f" -f aac
+      echo
     done
     cd -
+    echo
   fi
 done
+```
+
+## 删除已转换的文件
+
+```bash
+# find带-print0参数，xargs带-0参数是为了处理包含有空白符的文件名。
+find . -name *.wav -print0 | xargs -0 echo && rm -f
 ```
 
