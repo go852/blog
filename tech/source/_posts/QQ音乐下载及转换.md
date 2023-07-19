@@ -1,0 +1,96 @@
+---
+title: QQ音乐下载及转换
+categories:
+  - null
+tags:
+  - null
+date: 2023-07-17 16:37:13
+mathjax:
+---
+
+## QQ音乐下载
+
+mac版：[QQ音乐7.2.0.3](https://www.xue51.com/mac/61958.html#xzdz)
+
+## 破解软件下载
+
+```bash
+pip3 install -U takiyasha
+```
+
+## QQ音乐下载目录
+
+``` bash 
+cd "/Users/paul/Library/Containers/com.tencent.QQMusicMac/Data/Library/Application Support/QQMusicMac/iQmc" 
+```
+
+<!--more-->
+
+## 格式转换（解密）
+
+```bash
+takiyash *.qmcflac
+```
+
+> 参数说明：
+>
+>  -d DESTPATH, --dest DESTPATH
+>
+> ​            将所有输出文件放置在指定目录下；
+>
+> ​            与 '--ds, --dest-source' 冲突
+>
+>  --ds, --dest-source  将每一个输出文件放置在源文件所在目录下；
+>
+> ​            与 '-d, --dest' 冲突
+>
+>  -r, --recursive    如果 PATH 中存在目录，那么递归处理目录下的文件
+>
+> ​            （不包括子目录）
+>
+>  --np, --no-parallel  不使用并行模式
+>
+>  -t, --test      仅测试输入文件是否受支持，不进行解密
+>
+>  -q, --quiet      不显示任何信息，仅根据退出状态码表示运行结果
+
+
+
+不使用并行模式，指定输出文件夹转换：
+
+```bash
+takiyasha --np *.qmcflac -d /Volumes/Data/flac/
+```
+
+### 脚本
+
+```bash
+#!/bin/sh
+
+if [ $# -lt 1 ] ; then
+  echo "使用说明："
+  echo "  $0 目标目录"
+  echo
+  exit 0
+fi
+
+dest=$1
+
+for d in *; do
+  if [ -d "$d" ] ; then
+    echo "处理目录：$d"
+    target="$dest/$d"
+    if [ ! -d "$target" ] ; then mkdir -p "$target"; fi
+    cd $d
+    takiyasha --np *.qmcflac -d "$target"
+    cd -
+  fi
+done
+```
+
+执行命令：
+
+```bash
+./flac.sh /Volumes/Data/flac
+```
+
