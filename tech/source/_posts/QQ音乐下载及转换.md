@@ -175,3 +175,49 @@ done
 find . -name *.wav -print0 | xargs -0 echo && rm -f
 ```
 
+## 将中文文件名改为拼音文件名
+
+> 安装xpinyin模块
+>
+> python3 pyren.py
+
+### pyren.py脚本
+
+```python
+
+def pinyin_capitalize(str):
+    from xpinyin import Pinyin
+    p = Pinyin()
+    py = p.get_pinyin(str, '@@')
+    py2 = py.split('@@')
+    py3 = [c.capitalize() for c in py2]
+    py4 = ''.join(py3[0:])
+    return py4
+
+def rename_pinyin(folder='/Volumes/Data/flac'):
+    import os
+    import re
+    curdir = os.getcwd()
+    os.chdir(folder)
+    print("Processing ", folder, "...")
+    for count, f in enumerate(os.listdir()):
+        if f[0] == '.':
+            contine
+        # print(count, f)
+        filename = re.sub(r'[0-9]+\.', '',  f)
+        filename = str(count).zfill(3) + '.' + pinyin_capitalize(filename) #
+        if os.path.isdir(f):
+            print("rename ", f, filename)
+            os.rename(f, filename)
+            rename_pinyin(folder = folder + '/' + filename)
+        else:
+            name, ext = os.path.splitext(filename)
+            e = ext.lower()
+            if e.endswith("flac") or e.endswith("wav") or e.endswith("m4a"):
+                print("rename ", f, filename)
+                os.rename(f, filename)
+    os.chdir(curdir)
+
+rename_pinyin('/Volumes/Data/m4a/')
+```
+
