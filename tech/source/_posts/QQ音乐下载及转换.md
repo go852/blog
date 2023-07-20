@@ -108,15 +108,19 @@ brew install xld
 #!/bin/sh
 if [ $# -lt 1 ] ; then
   echo "使用说明："
-  echo "  $0 目标目录"
+  echo "  $0 源目录 目标目录"
   echo
   exit 0
 fi
 
-cd "$1"
-dest=$(pwd "$1")
-cd -
+echo '$1:' $1
+src=$(realpath "$1")
+dest=$(realpath "$2")
 
+echo $src
+echo $dest
+
+cd "$src"
 for d in *; do
   if [ -d "$d" ]; then
     echo "处理目录：$d"
@@ -133,6 +137,7 @@ for d in *; do
     echo
   fi
 done
+cd -
 ```
 
 ### 转换脚本flac2aac.sh
@@ -141,15 +146,19 @@ done
 #!/bin/sh
 if [ $# -lt 1 ] ; then
   echo "使用说明："
-  echo "  $0 目标目录"
+  echo "  $0 源目录 目标目录"
   echo
   exit 0
 fi
 
-cd "$1"
-dest=$(pwd "$1")
-cd -
+echo '$1:' $1
+src=$(realpath "$1")
+dest=$(realpath "$2")
 
+echo $src
+echo $dest
+
+cd "$src"
 for d in *; do
   if [ -d "$d" ]; then
     echo "处理目录：$d"
@@ -166,6 +175,7 @@ for d in *; do
     echo
   fi
 done
+cd -
 ```
 
 ## 删除已转换的文件
