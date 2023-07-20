@@ -202,7 +202,9 @@ def rename_pinyin(folder='/Volumes/Data/flac'):
     os.chdir(folder)
     print("Processing ", folder, "...")
 
-    for count, f in enumerate([f for f in os.listdir() if not f.startswith('.')]):
+    file_list = [f for f in os.listdir() if not f.startswith('.')
+                if f !='script']
+    for count, f in enumerate():
         if f[0] == '.':
             continue
         filename = re.sub(r'[0-9]+\.', '',  f)
