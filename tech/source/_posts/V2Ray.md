@@ -19,6 +19,6 @@ bash <(curl -L https://852us.com/v2fly)
 或：
 
 ```bash
-https://raw.githubusercontent.com/852us/v2fly/main/install.sh?v=$RANDDOM
+bash <(curl -L https://raw.githubusercontent.com/852us/v2fly/main/install.sh?v=$RANDDOM)
 ```
 
