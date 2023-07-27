@@ -46,6 +46,8 @@ brew install ffmpeg
 sudo cp yt-dlp /usr/bin/
 ```
 
+<!--more-->
+
 ## 下载音视频
 
 ### 基础下载方式
