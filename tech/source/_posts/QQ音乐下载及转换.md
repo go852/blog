@@ -199,11 +199,15 @@ find . -name *.wav -print0 | xargs -0 echo && rm -f
 def pinyin_capitalize(str):
     from xpinyin import Pinyin
     p = Pinyin()
-    py = p.get_pinyin(str, '@@')
-    py2 = py.split('@@')
+    py = p.get_pinyin(str, ' ')
+    py2 = py.split(' ')
+    # print(py2)
     py3 = [c.capitalize() for c in py2]
-    py4 = ''.join(py3[0:])
-    return py4
+    # print(py3)
+    py4 = ' '.join(py3[0:])
+    py5 = py4.replace(' .', '.')
+    # print(py5)
+    return py5
 
 def rename_pinyin(folder='/Volumes/Data/flac'):
     import os
@@ -218,7 +222,11 @@ def rename_pinyin(folder='/Volumes/Data/flac'):
         if f[0] == '.':
             continue
         filename = re.sub(r'[0-9]+\.', '',  f)
-        filename = str(count).zfill(3) + '.' + pinyin_capitalize(filename) #
+        filename = re.sub(r'.+-', '', filename)
+        # filename = str(count).zfill(3) + '.' + pinyin_capitalize(filename)
+        filename = pinyin_capitalize(filename)
+        print(filename)
+
         if os.path.isdir(f):
             print("rename ", f, filename)
             os.rename(f, filename)
