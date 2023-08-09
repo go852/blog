@@ -12,6 +12,10 @@ toc_number: true
 toc_expand: true
 ---
 
+## Latex
+
+https://www.latex-project.org
+
 ## 插入公式
 
 ### 行内公式
