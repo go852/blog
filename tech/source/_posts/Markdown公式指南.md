@@ -14,7 +14,7 @@ toc_expand: true
 
 ## Latex
 
-https://www.latex-project.org
+[https://www.latex-project.org](https://www.latex-project.org)
 
 ## 插入公式
 
