@@ -36,6 +36,8 @@ curl "https://awscli.amazonaws.com/AWSCLIV2.pkg" -o "AWSCLIV2.pkg"
 sudo installer -pkg AWSCLIV2.pkg -target /
 ```
 
+<!--more-->
+
 ## Windows平台
 
 ### 安装和更新要求
