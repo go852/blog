@@ -8,8 +8,6 @@ date: 2023-08-10 09:03:30
 mathjax:
 ---
 
-## 
-
 # AWS安装
 
 [安装或更新最新版本的 AWS CLI - AWS Command Line Interface (amazon.com)](https://docs.aws.amazon.com/zh_cn/cli/latest/userguide/getting-started-install.html)
@@ -141,17 +139,17 @@ xxxx@gmail.com
 右上角：登录用户名，Security credentials
 ```
 
-![image-20221204082711086](AWS%E5%91%BD%E4%BB%A4/image-20221204082711086.png)
+![image-20221204082711086](image-20221204082711086.png)
 
 ```
 访问密钥（访问密钥ID和秘密访问密钥）
 ```
 
-![image-20221208075227452](AWS%E5%91%BD%E4%BB%A4/image-20221208075227452.png)
+![image-20221208075227452](image-20221208075227452.png)
 
 **创建新的访问密钥**
 
-![image-20221208075628187](AWS%E5%91%BD%E4%BB%A4/image-20221208075628187.png)
+![image-20221208075628187](image-20221208075628187.png)
 
 ## configure命令
 
@@ -506,7 +504,7 @@ root@ip-172-31-13-87:~# aws lightsail start-instance --instance-name Ubuntu-1
 aws ec2 create-volume --volume-type gp2 --size 80 --availability-zone ap-northeast-1a
 ```
 
-![image-20230216083927999](AWS%E5%91%BD%E4%BB%A4/image-20230216083927999.png)
+![image-20230216083927999](image-20230216083927999.png)
 
 ```bash
 aws ec2 create-volume --volume-type gp2 --size 80 --availability-zone ap-northeast-1a | tee volume.txt
@@ -524,7 +522,7 @@ awk -F \" 'NR==8{print $4}' volume.txt
 aws ec2 attach-volume --volume-id vol-0d264eddd9b9edfa5 --instance-id i-0b6d9cb9bd04a10f2 --device /dev/sdf
 ```
 
-![image-20230216084310105](AWS%E5%91%BD%E4%BB%A4/image-20230216084310105.png)
+![image-20230216084310105](image-20230216084310105.png)
 
 ### 分离卷
 
@@ -532,7 +530,7 @@ aws ec2 attach-volume --volume-id vol-0d264eddd9b9edfa5 --instance-id i-0b6d9cb9
 aws ec2 detach-volume --volume-id vol-0d264eddd9b9edfa5
 ```
 
-![image-20230216084733635](AWS%E5%91%BD%E4%BB%A4/image-20230216084733635.png)
+![image-20230216084733635](image-20230216084733635.png)
 
 ### 删除卷
 
@@ -552,5 +550,5 @@ sudo mkfs -t ext4 /dev/xvdf
 sudo mount /dev/xvdf /mnt/data
 ```
 
-![image-20230216085121725](AWS%E5%91%BD%E4%BB%A4/image-20230216085121725.png)
+![image-20230216085121725](image-20230216085121725.png)
 
