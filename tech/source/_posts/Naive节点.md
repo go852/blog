@@ -122,13 +122,13 @@ C:/Users/paul/Desktop/naiveproxy-v107.0.5304.87-3-win-x64/naive.exe
 
 ![image-20221129150812142](image-20221129150812142.png)
 
-![image-20221129150615961](Naive%E8%8A%82%E7%82%B9/image-20221129150615961.png)
+![image-20221129150615961](image-20221129150615961.png)
 
 ### 新建代理服务器
 
 ```bash
-标签：Ly2
-主机：ly2.gocoin.one
+标签：abc
+主机：abc.def.come
 端口：443
 用户名：User
 密码：1d416156-2bdc-4470-80e5-6afeab1692d9
@@ -157,7 +157,7 @@ C:/Users/paul/Desktop/naiveproxy-v107.0.5304.87-3-win-x64/naive.exe
             "protocol": "naive",
             "sendThrough": "0.0.0.0",
             "settings": {
-                "host": "ly2.gocoin.one",
+                "host": "abc.def.com",
                 "padding": null,
                 "password": "1d416156-2bdc-4470-80e5-6afeab1692d9",
                 "port": 443,
@@ -171,12 +171,6 @@ C:/Users/paul/Desktop/naiveproxy-v107.0.5304.87-3-win-x64/naive.exe
     ]
 }
 ```
-
-
-
-![image-20221129151629330](image-20221129151629330.png)
-
-
 
 # Macos客户端安装及配置
 
