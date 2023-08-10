@@ -227,6 +227,12 @@ cp QvPlugin-NaiveProxy.v3.0.0.macOS-x64.so /Users/paul/Library/Preferences/qv2ra
 
 ```
 
+### 连接
+
+```bash
+naive+https://User:36fafcbe-9c5c-4323-97dc-fc84b61b2c81@n1.abc.com:443?padding=false#n1
+```
+
 
 
 
