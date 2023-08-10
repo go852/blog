@@ -514,8 +514,6 @@ cat volume.txt | awk -F : '{print $2}' | grep vol | awk -F \" '{print $2}'
 awk -F \" 'NR==8{print $4}' volume.txt
 ```
 
-
-
 ### 挂载卷
 
 ```bash
@@ -524,21 +522,7 @@ aws ec2 attach-volume --volume-id vol-0d264eddd9b9edfa5 --instance-id i-0b6d9cb9
 
 ![image-20230216084310105](image-20230216084310105.png)
 
-### 分离卷
-
-```bash
-aws ec2 detach-volume --volume-id vol-0d264eddd9b9edfa5
-```
-
-![image-20230216084733635](image-20230216084733635.png)
-
-### 删除卷
-
-```bash
-aws ec2 delete-volume --volume-id vol-0d264eddd9b9edfa5
-```
-
-### 在linux系统挂载卷
+#### 在linux系统挂载卷
 
 ```bash
 sudo mkdir /mnt/data
@@ -552,3 +536,25 @@ sudo mount /dev/xvdf /mnt/data
 
 ![image-20230216085121725](image-20230216085121725.png)
 
+### 查看卷
+
+```bash
+
+```
+
+### 分离卷
+
+```bash
+sudo umount /dev/xvdf
+aws ec2 detach-volume --volume-id vol-0d264eddd9b9edfa5
+```
+
+![image-20230216084733635](image-20230216084733635.png)
+
+### 删除卷
+
+```bash
+aws ec2 delete-volume --volume-id vol-0d264eddd9b9edfa5
+```
+
+### 
