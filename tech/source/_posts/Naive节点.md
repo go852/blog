@@ -62,6 +62,14 @@ bash <(curl -s -L https://raw.githubusercontent.com/imajeason/nas_tools/main/Nai
 naive
 ```
 
+### 卸载服务端
+
+```bash
+naive
+```
+
+
+
 ## 客户端安装（Qv2ray）
 
 ### 下载软件、核心与插件
@@ -172,21 +180,21 @@ C:/Users/paul/Desktop/naiveproxy-v107.0.5304.87-3-win-x64/naive.exe
 }
 ```
 
-# Macos客户端安装及配置
+## Macos客户端安装及配置
 
-## Qv2ray下载
+### Qv2ray下载
 
 ```bash
 wget https://github.com/Qv2ray/Qv2ray/releases/download/v2.7.0/Qv2ray-v2.7.0-macOS-x64.dmg
 ```
 
-## 安装[V2ray-core版本：4.45.2](https://github.com/v2fly/v2ray-core/releases/tag/v4.45.2)
+### 安装[V2ray-core版本：4.45.2](https://github.com/v2fly/v2ray-core/releases/tag/v4.45.2)
 
 ```bash
 wget https://github.com/v2fly/v2ray-core/releases/download/v4.45.2/v2ray-macos-64.zip
 ```
 
-## V2ray设置
+### V2ray设置
 
 ```bash
 mkdir ~/Desktop/Qv2Ray
@@ -227,10 +235,10 @@ cp QvPlugin-NaiveProxy.v3.0.0.macOS-x64.so /Users/paul/Library/Preferences/qv2ra
 
 ```
 
-### 连接
+### 客户端连接方式
 
 ```bash
-naive+https://User:36fafcbe-9c5c-4323-97dc-fc84b61b2c81@n1.abc.com:443?padding=false#n1
+naive+https://User:89458f76-41f4-403a-8841-6255ffffdcd9@n1.gocoin.one:443?padding=false#n1
 ```
 
 
