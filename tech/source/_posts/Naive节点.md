@@ -241,6 +241,38 @@ cp QvPlugin-NaiveProxy.v3.0.0.macOS-x64.so /Users/paul/Library/Preferences/qv2ra
 naive+https://User:89458f76-41f4-403a-8841-6255ffffdcd9@n1.abc.com:443?padding=false#n1
 ```
 
+## 直接使用naive做系统代理
+
+### 下载naive
+
+```bash
+wget https://github.com/klzgrad/naiveproxy/releases/download/v114.0.5735.91-3/naiveproxy-v114.0.5735.91-3-mac-x64.tar.xz
+```
+
+### 解压naive
+
+```bash
+tar xjvf naiveproxy-v114.0.5735.91-3-mac-x64.tar.xz
+cd naiveproxy-v114.0.5735.91-3-mac-x64
+sudo ln -snf $(pwd)/naive /usr/local/bin/naive
+```
+
+### 编辑config.json文件
+
+```json
+{
+  "listen": "http://127.0.0.1:8889",
+  "proxy": "https://User:48069728-9950-47a3-9bc7-8f211ef0699d@n1.abc.com",
+  "log": ""
+}
+```
+
+### 运行naive
+
+```bash
+naive
+```
+
 
 
 
