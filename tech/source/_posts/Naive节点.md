@@ -238,7 +238,7 @@ cp QvPlugin-NaiveProxy.v3.0.0.macOS-x64.so /Users/paul/Library/Preferences/qv2ra
 ### 客户端连接方式
 
 ```bash
-naive+https://User:89458f76-41f4-403a-8841-6255ffffdcd9@n1.gocoin.one:443?padding=false#n1
+naive+https://User:89458f76-41f4-403a-8841-6255ffffdcd9@n1.abc.com:443?padding=false#n1
 ```
 
 
