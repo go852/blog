@@ -22,9 +22,7 @@ apt install certbot
 
 ```bash
 # certbot certonly --standalone -d $domain --agree-to --email $email
-certbot certonly --standalone -d np2.gocoin.one --agree-to --email sunsdbh@126.com
-certbot certonly --standalone -d np3.gocoin.one --agree-to --email sunsdbh@126.com
-certbot certonly --standalone -d w2.gocoin.one --agree-to --email sunsdbh@126.com
+certbot certonly --standalone -d np2.abc.com --agree-to --email admin@email.com
 ```
 
 运行结果：
@@ -156,7 +154,7 @@ https://admin:123456@www.abc.com/
     probe_resistance
     upstream http://127.0.0.1:54321
   }
-  reverse_proxy https://www.gnu.org {
+  reverse_proxy https://www.fsf.org {
     header_up Host {upstream_hostport}
     header_up X-Forwarded-Host {host}
   }
