@@ -68,8 +68,6 @@ naive
 naive
 ```
 
-
-
 ## 客户端安装（Qv2ray）
 
 ### 下载软件、核心与插件
@@ -272,8 +270,3 @@ sudo ln -snf $(pwd)/naive /usr/local/bin/naive
 ```bash
 naive
 ```
-
-
-
-
-
