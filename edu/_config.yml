@@ -63,9 +63,9 @@ exclude: null
 ignore: null
 theme: next
 deploy:
-  - type: git
-    repo: git@github.com:852us/852us.github.io.git
-    branch: main
+  #- type: git
+  #  repo: git@github.com:852us/852us.github.io.git
+  #  branch: main
   - type: rsync
     host: 852us.com
     user: ubuntu
