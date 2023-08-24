@@ -40,6 +40,8 @@ shell_renew(){
 shell_renew
 ```
 
+<!--more-->
+
 ### 执行安装脚本
 
 ```python
