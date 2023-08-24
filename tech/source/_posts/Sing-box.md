@@ -38,6 +38,8 @@ drwxr-xr-x root/root     0 2023-08-06 00:43 ./usr/share/licenses/sing-box/
 -rw-r--r-- root/root    791 2023-08-05 14:01 ./usr/share/licenses/sing-box/LICENSE
 ```
 
+<!--more-->
+
 ### 随机生成密码
 
 ```bash
