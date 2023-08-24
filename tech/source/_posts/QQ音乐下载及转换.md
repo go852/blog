@@ -26,7 +26,7 @@ cd "/Users/paul/Library/Containers/com.tencent.QQMusicMac/Data/Library/Applicati
 
 <!--more-->
 
-## 格式转换qmcflac2flac（解密）
+## 格式转换qmc2flac（解密）
 
 ```bash
 takiyash *.qmcflac
@@ -67,15 +67,33 @@ takiyasha --np *.qmcflac -d /Volumes/Data/flac/
 ```bash
 #!/bin/sh
 
-if [ $# -lt 1 ] ; then
+if [ $# -lt 2 ] ; then
   echo "使用说明："
-  echo "  $0 目标目录"
+  echo "  $0 源目录 目标目录"
   echo
   exit 0
 fi
 
-dest=$1
+PWD="$(pwd)"
+src=$1
+dest=$2
 
+if [[ "${src:0:1}" == "/" ]]; then
+  echo "绝对路径：$src"
+else
+  echo "相对路径：$src"
+  src="$PWD/$src"
+  echo $src
+fi
+if [[ "${dest:0:1}" == "/" ]]; then
+  echo "绝对路径：$dest"
+else
+  echo "相对路径：$dest"
+  dest="$PWD/$dest"
+  echo $dest
+fi
+
+cd $src
 for d in *; do
   if [ -d "$d" ] ; then
     echo "处理目录：$d"
@@ -86,12 +104,14 @@ for d in *; do
     cd -
   fi
 done
+cd -
 ```
 
 执行命令：
 
 ```bash
-./qmc2flac.sh /Volumes/Data/flac
+# cd /Volumes/Data/音乐
+./qmc2flac.sh qmcflac flac
 ```
 
 ## 格式转换flac2wav
