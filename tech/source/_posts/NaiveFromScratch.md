@@ -25,6 +25,8 @@ apt install certbot
 certbot certonly --standalone -d np2.abc.com --agree-to --email admin@email.com
 ```
 
+<!--more-->
+
 运行结果：
 
 ```
