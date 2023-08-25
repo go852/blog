@@ -1,9 +1,9 @@
 ---
 title: QQ音乐下载及转换
 categories:
-  - null
+  - [QQ音乐]
 tags:
-  - null
+  - [QQ音乐]
 date: 2023-07-17 16:37:13
 mathjax:
 ---
@@ -65,46 +65,61 @@ takiyasha --np *.qmcflac -d /Volumes/Data/flac/
 ### 转换脚本qmc2flac.sh
 
 ```bash
-#!/bin/sh
+#!/bin/bash
 
-if [ $# -lt 2 ] ; then
-  echo "使用说明："
-  echo "  $0 源目录 目标目录"
-  echo
-  exit 0
-fi
-
-PWD="$(pwd)"
-src=$1
-dest=$2
-
-if [[ "${src:0:1}" == "/" ]]; then
-  echo "绝对路径：$src"
-else
-  echo "相对路径：$src"
-  src="$PWD/$src"
-  echo $src
-fi
-if [[ "${dest:0:1}" == "/" ]]; then
-  echo "绝对路径：$dest"
-else
-  echo "相对路径：$dest"
-  dest="$PWD/$dest"
-  echo $dest
-fi
-
-cd $src
-for d in *; do
-  if [ -d "$d" ] ; then
-    echo "处理目录：$d"
-    target="$dest/$d"
-    if [ ! -d "$target" ] ; then mkdir -p "$target"; fi
-    cd $d
-    takiyasha --np *.qmcflac -d "$target"
-    cd -
+usage() {
+  while getopts ":s:t:" opt; do
+    case $opt in
+    s)
+      echo "source: $OPTARG"
+      source=$OPTARG
+      ;;
+    t)
+      echo "target: $OPTARG"
+      target=$OPTARG
+      ;;
+    \?)
+      echo "无效参数：-$OPTARG" >&2
+      exit 1
+      ;;
+    esac
+  done
+  
+  shift $((OPTIND -1)) 
+  
+  if [[ (-z "$source") || ( -z "$target") ]] ; then
+    echo "使用说明："
+    echo "  $0 -s 源目录 -t 目标目录"
+    echo
+    exit 1
   fi
-done
-cd -
+}
+
+process_dir(){
+  PWD="$(pwd)"
+  if [[ "${source:0:1}" != "/" ]]; then
+    source="$PWD/$source"
+  fi
+  if [[ "${target:0:1}" != "/" ]]; then
+    target="$PWD/$target"
+  fi
+  
+  cd $source
+  for d in *; do
+    if [ -d "$d" ] ; then
+      echo "处理目录：$d"
+      dest="$target/$d"
+      if [ ! -d "$dest" ] ; then mkdir -p "$dest"; fi
+      cd $d
+      takiyasha --np *.qmcflac -d "$dest"
+      cd -
+    fi
+  done
+  cd -
+}
+
+usage $*
+process_dir
 ```
 
 执行命令：
@@ -114,7 +129,7 @@ cd -
 ./qmc2flac.sh qmcflac flac
 ```
 
-## 格式转换flac2wav
+## 格式转换
 
 使用xld进行格式转换
 
@@ -122,80 +137,86 @@ cd -
 brew install xld
 ```
 
-### 转换脚本flac2wav.sh
-
-```bash
-#!/bin/sh
-if [ $# -lt 1 ] ; then
-  echo "使用说明："
-  echo "  $0 源目录 目标目录"
-  echo
-  exit 0
-fi
-
-echo '$1:' $1
-src=$(realpath "$1")
-dest=$(realpath "$2")
-
-echo $src
-echo $dest
-
-cd "$src"
-for d in *; do
-  if [ -d "$d" ]; then
-    echo "处理目录：$d"
-    target="$dest/$d"
-    if [ ! -d "$target" ] ; then mkdir -p "$target"; fi
-    cd "$d"
-    for f in *.flac; do
-      target_filename="$target/${f%.flac}.wav"
-      echo xld "$f" -f wav -o "$target_filename"
-      xld "$f" -f wav -o "$target_filename"
-      echo
-    done
-    cd -
-    echo
-  fi
-done
-cd -
-```
-
 ### 转换脚本flac2aac.sh
 
 ```bash
 #!/bin/sh
-if [ $# -lt 1 ] ; then
-  echo "使用说明："
-  echo "  $0 源目录 目标目录"
-  echo
-  exit 0
-fi
 
-echo '$1:' $1
-src=$(realpath "$1")
-dest=$(realpath "$2")
+format="aac"
+ext="m4a"
 
-echo $src
-echo $dest
-
-cd "$src"
-for d in *; do
-  if [ -d "$d" ]; then
-    echo "处理目录：$d"
-    target="$dest/$d"
-    if [ ! -d "$target" ] ; then mkdir -p "$target"; fi
-    cd "$d"
-    for f in *.flac; do
-      target_filename="$target/${f%.flac}.m4a"
-      echo xld "$f" -f aac -o "$target_filename"
-      xld "$f" -f aac -o "$target_filename"
-      echo
-    done
-    cd -
-    echo
+usage() {
+  while getopts ":f:s:t:" opt; do
+    case $opt in
+    f)
+      echo "format: $OPTARG"
+      format=$OPTARG
+      ;;      
+    s)
+      echo "source: $OPTARG"
+      source=$OPTARG
+      ;;
+    t)
+      echo "target: $OPTARG"
+      target=$OPTARG
+      ;;
+    \?)
+      echo "无效参数：-$OPTARG" >&2
+      exit 1
+      ;;
+    esac
+  done
+  
+  shift $((OPTIND -1)) 
+  
+  if [[ (-z "$source") || ( -z "$target") ]] ; then
+    echo "使用说明："
+    echo "  $0 -f 格式 -s 源目录 -t 目标目录"
+    echo " 格式："
+    echo "    wav - wave"
+    echo "    aac - m4a"
+    echo "示例："
+    echo "  $0 -f wav -s flac -t wav"
+    echo "  $0 -f aac -s flac -t wav"
+    exit 1
   fi
-done
-cd -
+}
+
+
+process_dir(){
+  [ "$format" == "aac" ] && ext="m4a" || ext="$format"
+  echo "ext:$ext"
+  
+  PWD="$(pwd)"
+  if [[ "${source:0:1}" != "/" ]]; then
+    source="$PWD/$source"
+  fi
+  if [[ "${target:0:1}" != "/" ]]; then
+    target="$PWD/$target"
+  fi
+  
+  cd $source
+  for d in *; do
+    if [ -d "$d" ] ; then
+      echo "处理目录：$d"
+      dest="$target/$d"
+      if [ ! -d "$dest" ] ; then mkdir -p "$dest"; fi
+      cd "$d"
+      #takiyasha --np *.qmcflac -d "$dest"
+      for f in *.flac; do
+        dest_filename="$dest/${f%.flac}.$ext"
+        echo xld "$f" -f aac -o "$dest_filename"
+        xld "$f" -f $format -o "$dest_filename"
+        echo
+      done
+      cd -
+    fi
+  done
+  cd -
+}
+
+usage $*
+process_dir
 ```
 
 ## 删除已转换的文件
@@ -211,57 +232,102 @@ find . -name *.wav -print0 | xargs -0 echo && rm -f
 >
 > python3 pyren.py
 
-### pyren.py脚本
+### pinpyin.py脚本
 
-```python
-#/usr/bin/python
+改脚本会在pyren.sh脚本调用
+
+```pythone
+#!/usr/bin/python3
+import sys
+from xpinyin import Pinyin
 
 def pinyin_capitalize(str):
-    from xpinyin import Pinyin
-    p = Pinyin()
-    py = p.get_pinyin(str, ' ')
-    py2 = py.split(' ')
-    # print(py2)
-    py3 = [c.capitalize() for c in py2]
-    # print(py3)
-    py4 = ' '.join(py3[0:])
-    py5 = py4.replace(' .', '.')
-    # print(py5)
-    return py5
+  p = Pinyin()
+  py = p.get_pinyin(str, '@@')
+  py2 = py.split('@@')
+  py3 = [c.capitalize() for c in py2]
+  py4 = ''.join(py3[0:])
+  print(py4)
+  return py4
 
-def rename_pinyin(folder='/Volumes/Data/flac'):
-    import os
-    import re
-    curdir = os.getcwd()
-    os.chdir(folder)
-    print("Processing ", folder, "...")
-
-    file_list = [f for f in os.listdir() if not f.startswith('.')
-                if f !='script']
-    for count, f in enumerate(file_list):
-        if f[0] == '.':
-            continue
-        filename = re.sub(r'[0-9]+\.', '',  f)
-        filename = re.sub(r'.+-', '', filename)
-        # filename = str(count).zfill(3) + '.' + pinyin_capitalize(filename)
-        filename = pinyin_capitalize(filename)
-        print(filename)
-
-        if os.path.isdir(f):
-            print("rename ", f, filename)
-            os.rename(f, filename)
-            rename_pinyin(folder = folder + '/' + filename)
-        else:
-            name, ext = os.path.splitext(filename)
-            e = ext.lower()
-            if e.endswith("flac") or e.endswith("wav") or e.endswith("m4a"):
-                print("rename ", f, filename)
-                os.rename(f, filename)
-    os.chdir(curdir)
-
-import sys
-rename_pinyin(sys.argv[1])
-
+if len(sys.argv) == 2:
+  str=sys.argv[1]
+  pinyin_capitalize(str)
 ```
 
-> python3 pyren.py "/Volumes/Data/flac"
+### pyren.sh脚本
+
+```python
+#!/bin/sh
+PINYIN="$(pwd)/pinyin.py"
+usage() {
+  while getopts ":e:s:t:" opt; do
+    case $opt in
+    e)
+      echo "ext: $OPTARG"
+      ext=$OPTARG
+      ;;
+    s)
+      echo "source: $OPTARG"
+      source=$OPTARG
+      ;;
+    t)
+      echo "target: $OPTARG"
+      target=$OPTARG
+      ;;
+    \?)
+      echo "无效参数：-$OPTARG" >&2
+      exit 1
+      ;;
+    esac
+  done
+  
+  shift $((OPTIND -1)) 
+  
+  if [[ (-z "$ext") ||  (-z "$source") || ( -z "$target") ]] ; then
+    echo "使用说明："
+    echo "  $0 -e 扩展名 -s 源目录 -t 目标目录"
+    echo "示例："
+    echo "  $0 -e flac -s flac -t flac2"
+    exit 1
+  fi
+}
+
+
+process_dir(){  
+  PWD="$(pwd)"
+  if [[ "${source:0:1}" != "/" ]]; then
+    source="$PWD/$source"
+  fi
+  if [[ "${target:0:1}" != "/" ]]; then
+    target="$PWD/$target"
+  fi
+  
+  cd $source
+  for d in *; do
+    if [ -d "$d" ] ; then
+      echo "处理目录：$d"
+      newd=$(python3 $PINYIN "$d")
+      dest="$target/$newd"
+      if [ ! -d "$dest" ] ; then mkdir -p "$dest"; fi
+      cd "$d"
+      for f in *.$ext; do
+        f2=${f#*-}
+        newname=$(python3 $PINYIN "$f2")
+        dest_filename="$dest/$newname"
+        echo "$f: $dest_filename"
+        #echo cp "$f" "$dest_filename"
+        cp "$f" "$dest_filename"
+      done
+      echo
+      cd -
+    fi
+  done
+  cd -
+}
+
+usage $*
+process_dir
+```
+
+> ./pyren.sh -f flac -s flac -t flac2
