@@ -10,7 +10,13 @@ mathjax:
 
 ## QQ音乐下载
 
-mac版：[QQ音乐7.2.0.3](https://www.xue51.com/mac/61958.html#xzdz)
+### mac版：[QQ音乐7.2.0.3](https://www.xue51.com/mac/61958.html#xzdz)
+
+> 下载数量有限制
+
+### mac版：[QQ音乐6.1.3.4](https://www.xue51.com/mac/965.html)
+
+> 下载数量无限制
 
 ## 破解软件下载
 
