@@ -174,9 +174,10 @@ https://852us.com/naive
 
 ```bash
 #!/bin/bash
+TEMPDIR="/tmp/naive"
 USER="User"
 PASSWORD="!Qaz2023"
-while getopts ":h:e:u:p:" opt  
+while getopts ":h:e:u:p:" opt
 do
   case $opt in
   e)  # 处理 -e 选项
@@ -212,7 +213,10 @@ if [[ -z "$HOST" || -z "$USER" || -z "$PASSWORD" ]]; then
   exit 1
 fi
 
-cd /tmp
+if [ ! -d "$TEMPDIR" ]; then
+  mkdir -p "$TEMPDIR"
+fi
+cd "$TEMPDIR"
 
 BIN_DIR="/usr/local/bin"
 NAIVE_CONFIG_FILE="/etc/naive/config.json"
@@ -347,13 +351,15 @@ download_caddy() {
   echo "RELEASE_VERSION=$RELEASE_VERSION"
   DOWN_URL="$(awk -F '"' '/"browser_download_url"/{print $4}' $API_JSON)"
   echo "DOWN_URL=$DOWN_URL"
-  FILE_NAME="$(awk -F '"' '/"name"/{print $4}' $API_JSON)"
+  FILE_NAME="$(echo "$DOWN_URL" | sed 's/.*[!/]//')"
   echo "FILE_NAME=$FILE_NAME"
   PATH_NAME="$(echo $FILE_NAME | sed 's/.tar.xz//')"
   echo "PATH_NAME=$PATH_NAME"
   echo wget -c $DOWN_URL
   wget -c $DOWN_URL
+  echo tar xJvf $FILE_NAME
   tar xJvf $FILE_NAME
+  echo cp $PATH_NAME/caddy /usr/local/bin/
   cp $PATH_NAME/caddy /usr/local/bin/
 }
 
@@ -385,6 +391,6 @@ remove_tmp_files
 ## 客户端连接方式
 
 ```
-naive+https://user:pass@np2.gocoin.one:443?padding=false#np2
+naive+https://user:pass@np2.abc.com:443?padding=false#np2
 ```
 
