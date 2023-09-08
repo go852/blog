@@ -1,8 +1,9 @@
 ---
 title: Python
 categories:
-  - Python
+  - [程序设计, Python]
 tags:
+  - 程序设计
   - Python
 date: 2023-06-17 19:16:22
 mathjax:
