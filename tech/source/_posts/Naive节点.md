@@ -1,11 +1,10 @@
 ---
 title: Naive节点
 categories:
-  - [Naive, Qv2Ray]
+  - [科学上网, Naive]
 tags:
+  - 科学上网
   - Navie
-  - Qv2Ray
-  - v2ray
 date: 2023-08-10 16:28:23
 mathjax:
 ---
