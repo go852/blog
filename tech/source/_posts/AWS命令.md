@@ -1,9 +1,10 @@
 ---
 title: AWS命令
 categories:
-  - [aws]
+  - [云服务器, Aws]
 tags:
-  - aws
+  - 云服务器
+  - Aws
 date: 2023-08-10 09:03:30
 mathjax:
 ---
