@@ -1,9 +1,10 @@
 ---
 title: NaiveFromScratch
 categories:
-  - [naive]
+  - [科学上网, Naive]
 tags:
-  - [naive]
+  - 科学上网
+  - Naive
 date: 2023-08-14 16:46:19
 mathjax:
 ---
