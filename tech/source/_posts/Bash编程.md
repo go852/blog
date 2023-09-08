@@ -1,8 +1,9 @@
 ---
 title: Bash编程
 categories:
-  - Bash
+  - 程序设计,Bash
 tags:
+  - 程序设计
   - Bash
 date: 2023-04-21 09:05:46
 ---
