@@ -1,8 +1,9 @@
 ---
 title: V2Ray
 categories:
-  - V2Ray
+  - [科学上网,V2Ray]
 tags:
+  - 科学上网
   - V2Ray
 date: 2023-07-25 11:16:35
 mathjax:
