@@ -1,10 +1,10 @@
 ---
 title: yt-dlp
 categories:
-  - [Youtube, yt-dlp]
+  - [音视频, Yt-dlp]
 tags:
-  - Youtube
-  - yt-dlp
+  - 音视频
+  - Yt-dlp
 date: 2023-07-27 14:39:26
 mathjax:
 ---
