@@ -1,7 +1,7 @@
 ---
 title: Bash编程
 categories:
-  - 程序设计,Bash
+  - [程序设计,Bash]
 tags:
   - 程序设计
   - Bash
