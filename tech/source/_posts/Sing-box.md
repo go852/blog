@@ -1,9 +1,10 @@
 ---
 title: Sing-box
 categories:
-  - null
+  - [科学上网, Sing-box]
 tags:
-  - null
+  - 科学上网
+  - Sing-box
 date: 2023-08-11 17:12:15
 mathjax:
 ---
