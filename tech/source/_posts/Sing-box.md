@@ -12,14 +12,14 @@ mathjax:
 ## 服务器安装
 
 ```bash
-wget https://github.com/SagerNet/sing-box/releases/download/v1.3.6/sing-box_1.3.6_linux_amd64.deb
-sudo dpkg -i sing-box_1.3.6_linux_amd64.deb 
+wget https://github.com/SagerNet/sing-box/releases/download/v1.4.1/sing-box_1.4.1_linux_amd64.deb
+sudo dpkg -i sing-box_1.4.1_linux_amd64.deb 
 ```
 
 ### 查看已安装文件
 
 ```bash
-dkpg -c sing-box_1.3.6_linux_amd64.deb
+dkpg -c sing-box_1.4.1_linux_amd64.deb
 ```
 
 ```
@@ -66,7 +66,7 @@ openssl rand -base64 16
             "type": "shadowtls",
             "tag": "shadowtls-in",
             "listen": "::",
-            "listen_port": 443,
+            "listen_port": 8448,
             "sniff": true,
             "sniff_override_destination": true,
             "detour": "shadowsocks-in",
@@ -132,21 +132,7 @@ Aug 11 09:22:31 ip-172-31-41-67 sing-box[3552]: INFO[0000] inbound/shadowsocks[s
 Aug 11 09:22:31 ip-172-31-41-67 sing-box[3552]: INFO[0000] sing-box started (0.00s)
 ```
 
-## 客户端安装
-
-### macOS客户端
-
-#### 安装软件包
-
-```bash
-wget https://github.com/SagerNet/sing-box/releases/download/v1.3.6/sing-box-1.3.6-darwin-amd64.tar.gz
-tar xzvf sing-box-1.3.6-darwin-amd64.tar.gz
-```
-
-#### 设置系统代理
-
-> 1. https代理
-> 2. 注意端口号：10000，可以自定义
+## 客户端安装及配置
 
 ### 编辑配置文件
 
@@ -155,6 +141,7 @@ tar xzvf sing-box-1.3.6-darwin-amd64.tar.gz
 #### shadow-tls
 
 ```json
+cat <<EOF >config.json
 {
     "log": {
         "level": "info",
@@ -205,8 +192,8 @@ tar xzvf sing-box-1.3.6-darwin-amd64.tar.gz
         {
             "type": "shadowtls",
             "tag": "shadowtls-out",
-            "server": "sb1.gocoin.one",
-            "server_port": 443,
+            "server": "s2.gocoin.one",
+            "server_port": 8448,
             "version": 3,
             "password": "chika",
             "tls": {
@@ -224,5 +211,26 @@ tar xzvf sing-box-1.3.6-darwin-amd64.tar.gz
         }
     ]
 }
+EOF
 ```
 
+### macOS客户端
+
+#### 安装软件包
+
+```bash
+wget https://github.com/SagerNet/sing-box/releases/download/v1.4.1/sing-box-1.4.1-darwin-amd64.tar.gz
+
+tar xzvf sing-box-1.4.1-darwin-amd64.tar.gz
+```
+
+#### 设置系统代理
+
+> 1. https代理
+> 2. 注意端口号：10000，可以自定义
+
+#### 运行sing-box
+
+```
+./sing-box run
+```
