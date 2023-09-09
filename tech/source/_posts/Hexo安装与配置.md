@@ -18,8 +18,12 @@ curl -fsSL https://deb.nodesource.com/setup_19.x | sudo -E bash - && sudo apt-ge
 ### macOS
 
 ```bash
-wget https://nodejs.org/dist/v19.8.1/node-v19.8.1.pkg
-sudo installer -verbose -pkg node-v19.8.1.pkg -target /
+#wget https://nodejs.org/dist/v19.8.1/node-v19.8.1.pkg
+#sudo installer -verbose -pkg node-v19.8.1.pkg -target /
+
+# brew install node
+
+https://nodejs.org/dist/v20.6.1/node-v20.6.1-darwin-x64.tar.gz
 ```
 
 <!--more-->
