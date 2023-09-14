@@ -42,6 +42,8 @@ defaults write com.apple.finder AppleShowAllFiles -bool false
 killall Finder
 ```
 
+<!--more-->
+
 ## hdiutil管理dmg文件
 
 ### 创建dmg文件
