@@ -11,6 +11,27 @@ mathjax:
 
 
 
+## 字典
+
+### 遍历
+
+```python
+# 使用items()方法遍历字典
+my_dict = {'name': 'Tom', 'age': 18, 'sex': '男'}
+for key, value in my_dict.items():
+    print(key, value)
+```
+
+
+
+```python
+my_dict = {'name': 'Tom', 'age': 18, 'sex': '男'}
+for key in my_dict:
+    print(key, ':', my_dict[key])
+```
+
+
+
 ## DataFrame
 
 ### 创建DataFrame对象
