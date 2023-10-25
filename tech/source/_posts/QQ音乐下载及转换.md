@@ -24,7 +24,8 @@ mathjax:
 ## 破解软件及格式转换软件安装
 
 ```bash
-pip3 install takiyasha xld
+pip3 install takiyasha
+brew install xld
 ```
 
 ## QQ音乐下载目录
