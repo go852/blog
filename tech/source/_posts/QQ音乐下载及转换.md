@@ -21,10 +21,10 @@ mathjax:
 
 ### mac版：[QQ音乐5.5](https://www.pc9.com/pc/info-1776.html)
 
-## 破解软件下载
+## 破解软件及格式转换软件安装
 
 ```bash
-pip3 install takiyasha
+pip3 install takiyasha xld
 ```
 
 ## QQ音乐下载目录
