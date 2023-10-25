@@ -24,7 +24,7 @@ mathjax:
 ## 破解软件下载
 
 ```bash
-pip3 install -U takiyasha
+pip3 install takiyasha
 ```
 
 ## QQ音乐下载目录
