@@ -298,3 +298,15 @@ cd edu
 hexo clean && hexo server --watch
 ```
 
+
+
+### 模块说明
+
+#### hexo-renderer-pandoc
+
+使用该模块，需要额外安装pandoc。
+
+```
+brew install pandoc
+```
+
