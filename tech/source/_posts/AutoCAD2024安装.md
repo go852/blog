@@ -8,9 +8,13 @@ date: 2023-10-26 11:24:36
 mathjax:
 ---
 
+## 下载
+
+[AutoCAD for Mac下载](https://macapp.org.cn/app/autocad.html)
+
 ## 安装
 
-
+运行安装程序Install Autodesk AutoCAD 2024 for Mac.app
 
 ## 第一次运行
 
