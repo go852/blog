@@ -20,6 +20,18 @@ brew install android-platform-tools --cask
 
 ## Adb命令
 
+## 启动服务器
+
+```shell
+adb start-server
+```
+
+## 停止服务器
+
+```shell
+adb kill-server
+```
+
 ### 连接设备
 
 ```shell
