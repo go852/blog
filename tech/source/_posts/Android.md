@@ -22,26 +22,26 @@ brew install android-platform-tools --cask
 
 ## 启动服务器
 
-```shell
+```bash
 adb start-server
 ```
 
 ## 停止服务器
 
-```shell
+```bash
 adb kill-server
 ```
 
 ### 查询已连接的设备
 
-```shell
+```bash
 adb devices
 adb devices -l
 ```
 
 ## 获取前台app名称
 
-```shell
+```bash
 adb shell "dumpsys activity | grep mCurrentFocus"
 ```
 
@@ -49,7 +49,7 @@ adb shell "dumpsys activity | grep mCurrentFocus"
 
 ## 获取屏幕尺寸
 
-```shell
+```bash
 adb shell wm size
 ```
 
@@ -59,7 +59,7 @@ adb shell wm size
 
 ### 模拟屏幕滑动
 
-```shell
+```bash
 adb shell input swipe 500 2000 500 1000
 ```
 
@@ -69,7 +69,7 @@ adb shell input swipe 500 2000 500 1000
 
 ## 浮点运算
 
-```shell
+```bash
 echo "1.5 + 3" | bc
 ```
 
@@ -77,7 +77,7 @@ echo "1.5 + 3" | bc
 
 ## 随机间隔
 
-```shell
+```bash
 sleep $(((RANDROM % 70 / 10 + 3)))
 或：
 t=$(echo "scale=2;$RANDOM % 7000 / 10 + 3" | bc)
@@ -87,7 +87,7 @@ sleep $t
 
 ## 代码
 
-```shell
+```bash
 #!/bin/sh
 
 #ACTIVITIES="com.dragon.read/com.dragon.read.reader.ui.ReaderActivity
