@@ -32,12 +32,20 @@ adb start-server
 adb kill-server
 ```
 
-### 连接设备
+### 查询已连接的设备
 
 ```shell
 adb devices
 adb devices -l
 ```
+
+## 获取前台app名称
+
+```shell
+adb shell "dumpsys activity | grep mCurrentFocus"
+```
+
+> mCurrentFocus=Window{63a2419 u0 com.dragon.read/com.dragon.read.reader.ui.ReaderActivity}
 
 ## 获取屏幕尺寸
 
@@ -59,6 +67,14 @@ adb shell input swipe 500 2000 500 1000
 >
 > 从（500，2000）上滑到（500,1000）
 
+## 浮点运算
+
+```shell
+echo "1.5 + 3" | bc
+```
+
+
+
 ## 随机间隔
 
 ```shell
@@ -74,14 +90,95 @@ sleep $t
 ```shell
 #!/bin/sh
 
+#ACTIVITIES="com.dragon.read/com.dragon.read.reader.ui.ReaderActivity
+ACTIVITIES="
+  com.ss.android.ugc.aweme.lite/com.ss.android.ugc.aweme.splash.SplashActivity
+  com.ss.android.ugc.live/com.ss.android.ugc.aweme.splash.SplashActivity
+  com.sankuai.meituan/com.meituan.android.qtitans.QtitansContainerActivity
+  com.ss.android.article.lite/com.ss.android.article.lite.activity.SplashActivity
+"
+
+SWIPEUP_APPS="ss.android.ugc.aweme.lite ss.android.ugc.live sankuai.meituan ss.android.article.lite cat.readall"
+SWIPELEFT_APPS="dragon.read" 
+
+swipe(){
+  #echo $ADB shell input swipe $1 $2 $3 $4
+  $ADB shell input swipe $1 $2 $3 $4
+}
+
+swipe_left(){
+  y1=$((YMAX * (RANDOM % 10 + 50) / 100))
+  y2=$((y1 + YMAX * (RANDOM % 5) / 100))
+  x1=$((XMAX * (RANDOM % 10 + 50) / 100))
+  x2=$((x1 - XMAX * (RANDOM % 8 + 15) / 100))
+  echo "swipe_left: $x1 $y1 $x2 $y2"
+  swipe $x1 $y1 $x2 $y2
+}
+
+swipe_up(){
+  x1=$((XMAX * (RANDOM % 10 + 45) / 100))
+  x2=$((x1 + XMAX * (RANDOM % 5) / 100))
+  y1=$((YMAX * (RANDOM % 10 + 50) / 100))
+  y2=$((y1 - YMAX * (RANDOM % 5 + 30) / 100))
+  echo "swipe_up: $x1 $y1 $x2 $y2"
+  swipe $x1 $y1 $x2 $y2
+}
+
+get_focus_app(){
+  FOCUS_APP=$(adb shell "dumpsys activity | grep mCurrentFocus" | awk -F 'com\.|/' '{print $2}')
+  echo $FOCUS_APP
+}
+
+switch_app(){
+  adb shell am start $1
+}
+
+process_app(){
+  total_time=0
+  while [[ $(echo "$total_time / 1" | bc ) -lt 3600 ]]; do
+    echo "Foucs Application: $(get_focus_app)"
+    for app in $SWIPEUP_APPS; do
+      if [[ "$(get_focus_app)" == "$app" ]] ; then 
+        t=$(echo "scale=2;$RANDOM % 999 / 5 + 1.27" | bc)
+        echo "after $t s..."
+        swipe_up 
+        sleep $t
+        total_time=$(echo "$total_time + $t" | bc)
+        echo "total_time: $total_time seconds..."
+        echo
+      fi
+    done
+    for app in $SWIPELEFT_APPS; do
+      if [[ "$(get_focus_app)" == "$app" ]] ; then 
+        t=$(echo "scale=2;$RANDOM % 499 / 5 + 5.27" | bc)
+        echo "after $t s..."
+        swipe_left
+        sleep t
+        total_time=$(echo "$total_time + $t" | bc)
+        echo "total_time: $total_time seconds..."
+        echo
+      fi
+    done
+  done
+}
+
 while getopts ":s:" opt
 do
   case $opt in
   s)
     ID=$OPTARG
     ;;
+  *)
+    echo "Usage:"
+    echo "  -h: help"
+    echo "  -s device_id" 
+    echo
+    exit 1
+    ;;
   esac
 done
+
+adb start-server
 
 if [ $ID ]; then
   OPT_ID="-s $ID"
@@ -92,20 +189,12 @@ XMAX=$($ADB shell wm size | awk -F ': ' '{print $2}' | sed 's/x.*//')
 YMAX=$($ADB shell wm size | awk -F ': ' '{print $2}' | sed 's/.*x//')
 echo "XMAX: $XMAX, YMAX:$YMAX"
 
-swipe(){
-  echo $ADB shell input swipe $1 $2 $3 $4
-  $ADB shell input swipe $1 $2 $3 $4
-}
-
-while true; do
-  t=$(echo "scale=2;$RANDOM % 3999 / 10 + 3.27" | bc)
-  x1=$((XMAX * (RANDOM % 10 + 45) / 100))
-  y1=$((YMAX * (RANDOM % 10 + 80) / 100))
-  x2=$((x1 + XMAX * (RANDOM % 10) / 100))
-  y2=$((y1 - YMAX * (RANDOM % 30 + 30) / 100))
-  echo "${t}s: $x1 $y1 $x2 $y2"
-  swipe $x1 $y1 $x2 $y2
-  sleep $t
+export -f process_app
+for activity in $ACTIVITIES; do
+  echo
+  echo $activity
+  switch_app $activity
+  process_app
 done
 ```
 
