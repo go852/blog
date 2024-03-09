@@ -1,5 +1,5 @@
 ---
-title: yt-dlp
+title: Youtue下载工具yt-dlp
 categories:
   - [音视频, Yt-dlp]
 tags:
@@ -8,8 +8,6 @@ tags:
 date: 2023-07-27 14:39:26
 mathjax:
 ---
-
-# Youtue下载工具yt-dlp
 
 ## 安装
 
@@ -90,5 +88,18 @@ alias yec='yt-dlp -f ba+bv --sub-langs "en,zh" --embed-subs --embed-thumbnail --
 alias yae='yt-dlp -f ba+bv --write-auto-subs --sub-langs en --embed-subs --embed-thumbnail --merge-output-format mp4'
 alias yac='yt-dlp -f ba+bv --write-auto-subs --sub-langs zh --embed-subs --embed-thumbnail --merge-output-format mp4'
 alias yaec='yt-dlp -f ba+bv --write-auto-subs --sub-langs "en,zh" --embed-subs --embed-thumbnail --merge-output-format mp4'
+```
+
+## 字幕
+
+### 列出所有字幕
+
+```
+--list-subs 列出所有的字幕
+```
+
+### 字幕格式
+
+```
 ```
 
