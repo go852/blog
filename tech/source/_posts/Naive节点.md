@@ -1,5 +1,5 @@
 ---
-title: Naive节点
+title: Naive服务器及客户端（QV2Ray）安装及配置
 categories:
   - [科学上网, Naive]
 tags:
@@ -112,7 +112,7 @@ V2Ray4.45.2，注意：5.0以上的版本不能使用。
 1、将下载下来的QvPlugin-NaiveProxy.v3.0.0.Windows-x64.dll文件复制到qv2ray安装目录的plugins子目录里面。
 ```
 
-![image-20221129150042820](image-20221129150042820.png)
+<img src="image-20221129150042820.png" alt="image-20221129150042820" style="zoom:100%;" />
 
 ```bash
 2、选择NaiveProxy Plugin（已加载）：
@@ -127,9 +127,9 @@ C:/Users/paul/Desktop/naiveproxy-v107.0.5304.87-3-win-x64/naive.exe
 可以看见：NaiveProxy: naive 107.0.5304.87的版本。
 ```
 
-![image-20221129150812142](image-20221129150812142.png)
+<img src="image-20221129150812142.png" alt="image-20221129150812142" style="zoom:100%;" />
 
-![image-20221129150615961](image-20221129150615961.png)
+<img src="image-20221129150615961.png" alt="image-20221129150615961" style="zoom:100%;" />
 
 ### 新建代理服务器
 
