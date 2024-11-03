@@ -24,3 +24,9 @@ find ./ -name "*(1).*" -print0 | xargs -0 rm -f
 find ./ -name "*(1).*" -exec rm -f {} \;
 ```
 
+> 删除所有以**"._"**开头的文件：
+
+```bash
+find ./ -name "._*" -type f -exec rm -f {} \;
+```
+
