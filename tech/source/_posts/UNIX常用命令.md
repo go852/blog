@@ -15,6 +15,12 @@ mathjax:
 > 因为：文件名中含有**'('**与**')'**特殊字符，find命令需要使用"-print0"参数，对应的xargs使用"-0"参数
 
 ```bash
-find ./ -name "*\(1\).*" -print0 | xargs -0 rm -f
+find ./ -name "*(1).*" -print0 | xargs -0 rm -f
+```
+
+或：
+
+```bash
+find ./ -name "*(1).*" -exec rm -f {} \;
 ```
 
