@@ -30,3 +30,12 @@ find ./ -name "*(1).*" -exec rm -f {} \;
 find ./ -name "._*" -type f -exec rm -f {} \;
 ```
 
+## ffmpeg
+
+### 转换格式(mp4 -> mov)
+
+```bash
+ffmpeg -c:v copy -c:a copy -i input.mp4 output.mov
+ffmpeg -i input.mp4 output.mov
+```
+
