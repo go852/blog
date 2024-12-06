@@ -10,6 +10,31 @@ mathjax:
 
 ## 列表
 
+```python
+def get_factors2(number):
+  import math
+  factors = []
+  sqrt = math.sqrt(number)
+  # print(f"{number}的开方数{sqrt:.3f}")
+  for i in range(1, int(sqrt)+1):
+    if number % i == 0:
+      factors.append(i)
+      if number // i != i:
+        factors.append(number // i)
+  # print(factors)
+  return sorted(factors)
+
+if __name__ == '__main__':
+  i = 0
+  factors = get_factors2(100)
+  print(factors)
+  for f in factors:
+    print(f"factors[{i}]: {factors[i]}")
+    i += 1
+```
+
+
+
 ## 字符串
 
 ### f""
