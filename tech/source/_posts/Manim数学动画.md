@@ -12,6 +12,21 @@ mathjax:
 
 ### macOS
 
+Intel CPU
+
 ```bash
+brew install py3cairo ffmpeg
+```
+
+Apple CPU
+
+```bash
+brew install pango scipy
+```
+
+公共：
+
+```bash
+pip3 install manim
 ```
 
