@@ -1,9 +1,10 @@
 ---
 title: AppleWatch
 categories:
-  - null
+  - [Apple]
 tags:
-  - null
+  - Apple
+  - Watch
 date: 2024-11-03 21:19:44
 mathjax:
 ---
