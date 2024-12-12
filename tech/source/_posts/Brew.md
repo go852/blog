@@ -1,9 +1,10 @@
 ---
 title: Brew
 categories:
-  - null
+  - [macOS]
 tags:
-  - null
+  - macOS
+  - Brew
 date: 2024-12-09 17:57:37
 mathjax:
 ---
