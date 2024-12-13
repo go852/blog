@@ -1,9 +1,9 @@
 ---
 title: UNIX常用命令
 categories:
-  - null
+  - [Unix]
 tags:
-  - null
+  - Unix
 date: 2024-11-03 19:02:39
 mathjax:
 ---
