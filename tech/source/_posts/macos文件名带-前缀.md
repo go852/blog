@@ -1,9 +1,10 @@
 ---
 title: macos文件名带._前缀
 categories:
-  - null
+  - [macOS]
 tags:
-  - null
+  - macOS
+  - 文件名前缀
 date: 2024-10-25 17:35:09
 mathjax:
 ---
