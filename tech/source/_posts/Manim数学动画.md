@@ -1,12 +1,22 @@
 ---
 title: Manim数学动画
 categories:
+<<<<<<< HEAD
   - [Python]
   - [数学]
   - [动画]
 tags:
   - Python
   - 数学
+=======
+  - [数学]
+  - [Python]
+  - [Manim]
+tags:
+  - 数学
+  - Python
+  - Manim
+>>>>>>> 78245b0fe2d78560bf507a189f4c9154da2bb043
 date: 2024-12-09 16:09:04
 mathjax:
 ---
