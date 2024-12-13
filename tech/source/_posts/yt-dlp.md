@@ -1,10 +1,10 @@
 ---
 title: Youtue下载工具yt-dlp
 categories:
-  - [音视频, Yt-dlp]
+  - [音视频, yt-dlp]
 tags:
   - 音视频
-  - Yt-dlp
+  - yt-dlp
 date: 2023-07-27 14:39:26
 mathjax:
 ---
