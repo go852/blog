@@ -1,9 +1,11 @@
 ---
 title: Python语法
 categories:
-  - null
+  - [程序设计]
+  - [Python]
 tags:
-  - null
+  - 程序设计
+  - Python
 date: 2024-12-06 16:01:51
 mathjax:
 ---
