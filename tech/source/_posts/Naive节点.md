@@ -4,7 +4,7 @@ categories:
   - [科学上网, Naive]
 tags:
   - 科学上网
-  - Navie
+  - Naive
 date: 2023-08-10 16:28:23
 mathjax:
 ---
