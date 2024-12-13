@@ -1,9 +1,12 @@
 ---
 title: Manim数学动画
 categories:
-  - null
+  - [Python]
+  - [数学]
+  - [动画]
 tags:
-  - null
+  - Python
+  - 数学
 date: 2024-12-09 16:09:04
 mathjax:
 ---
