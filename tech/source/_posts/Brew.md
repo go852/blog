@@ -1,8 +1,9 @@
 ---
 title: Brew
 categories:
-  - [macOS]
+  - [操作系统,macOS]
 tags:
+  - 操作系统
   - macOS
   - Brew
 date: 2024-12-09 17:57:37
