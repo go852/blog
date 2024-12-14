@@ -1,9 +1,11 @@
 ---
 title: Manim数学动画
 categories:
+  - [程序设计]
   - [Python]
   - [Manim]
 tags:
+  - 程序设计
   - Python
   - Manim
 date: 2024-12-09 16:09:04
