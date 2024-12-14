@@ -1,7 +1,7 @@
 ---
 title: macos文件名带._前缀
 categories:
-  - [macOS]
+  - [操作系统,macOS]
 tags:
   - macOS
   - 文件名前缀
