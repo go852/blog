@@ -1,10 +1,10 @@
 ---
 title: MacOS
 categories:
-  - [操作系统, MacOS]
+  - [操作系统, macOS]
 tags:
   - 操作系统
-  - MacOS
+  - macOS
 date: 2023-09-14 16:17:41
 mathjax:
 ---
