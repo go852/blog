@@ -1,8 +1,7 @@
 ---
 title: Python语法
 categories:
-  - [程序设计]
-  - [Python]
+  - [程序设计,Python]
 tags:
   - 程序设计
   - Python
