@@ -16,8 +16,10 @@ mathjax:
 ## xattr(解决app不能运行的问题)
 
 ```bash
+# macOS 15
+sudo spctl --master-disable
+sudo xattr -r -d com.apple.quarantine appname.app
 sudo xattr -cr appname.app
-sudo xattr -rd com.apple.quarantine appname.app
 ```
 
 ## 清除DNS缓存
