@@ -1,8 +1,9 @@
 ---
 title: UNIX常用命令
 categories:
-  - [Unix]
+  - [操作系统,Unix]
 tags:
+  - 操作系统
   - Unix
 date: 2024-11-03 19:02:39
 mathjax:
