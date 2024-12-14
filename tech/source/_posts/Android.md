@@ -1,8 +1,9 @@
 ---
 title: Android
 categories:
-  - Android
+  - [操作系统,Android]
 tags:
+  - 操作系统
   - Android
 date: 2023-12-13 20:12:13
 mathjax:
