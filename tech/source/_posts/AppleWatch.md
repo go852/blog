@@ -1,7 +1,7 @@
 ---
 title: AppleWatch
 categories:
-  - [Apple]
+  - [Apple,Watch]
 tags:
   - Apple
   - Watch
