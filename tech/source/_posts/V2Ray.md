@@ -20,6 +20,6 @@ bash <(curl -L https://852us.com/v2fly)
 或：
 
 ```bash
-bash <(curl -L https://raw.githubusercontent.com/852us/v2fly/main/install.sh?v=$RANDDOM)
+bash < (curl -L https://raw.githubusercontent.com/go852/internet/refs/heads/main/v2fly/install.sh?v=$RANDDOM)
 ```
 
